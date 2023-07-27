@@ -3,6 +3,15 @@ import { FrontHouseLogo } from '../../../assets'
 import { TbBrandFacebook, TbBrandPinterest, TbBrandLinkedin, TbBrandInstagram, TbBrandLeetcode } from 'react-icons/tb'
 import { Link } from 'react-router-dom'
 const Contact = () => {
+
+	const menuSocialMedia = [
+		{item: TbBrandFacebook},
+		{item: TbBrandInstagram},
+		{item: TbBrandLinkedin},
+		{item: TbBrandPinterest},
+		{item: TbBrandLeetcode}
+	]
+
 	return (
 		<div className='wrapper'>
 			<div className="w-full xl:w-1/2 order-2 xl:order-none xl:border-r border-black xl:border-b-[0px] border-b">
@@ -15,7 +24,7 @@ const Contact = () => {
 					</div>
 				</div>
 				<div className="flex w-full">
-					<div className="w-1/2 h-[371px] flex flex-col justify-center items-center border-r border-black">
+					<div className="w-1/2 h-[380px] flex flex-col justify-center items-center border-r border-black">
 						<h1 className='px-6 py-3 font-medium text-2xl tracking-wide'>Phone</h1>
 						<div className="w-full flex flex-col gap-6 justify-center items-center border-t border-black p-6 flex-[1_0_0]">
 							<p className='md:text-base text-sm'>
@@ -47,31 +56,13 @@ const Contact = () => {
 					</div>
 					<div className="w-1/2 px-8">
 						<ul className='w-full h-full flex justify-around items-center'>
-							<li>
-								<Link>
-									<TbBrandFacebook size={25} />
-								</Link>
-							</li>
-							<li>
-								<Link>
-									<TbBrandInstagram size={25} />
-								</Link>
-							</li>
-							<li>
-								<Link>
-									<TbBrandLinkedin size={25} />
-								</Link>
-							</li>
-							<li>
-								<Link>
-									<TbBrandPinterest size={25} />
-								</Link>
-							</li>
-							<li>
-								<Link>
-									<TbBrandLeetcode size={25} />
-								</Link>
-							</li>
+							{menuSocialMedia.map((item) => (
+								<li>
+									<Link>
+										<item.item size={30} />
+									</Link>
+								</li>
+							))}
 						</ul>
 					</div>
 				</div>

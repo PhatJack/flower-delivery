@@ -1,63 +1,21 @@
 import React from 'react'
 import Navbar from '../components/navbar/Navbar'
-import { Fresheners, HeroImg } from '../assets'
+import { Fresheners} from '../assets'
 import CardCategory from '../components/card/CardCategory'
 import CardItem from '../components/card/CardItem'
 import { FreshFlower, DriedFlower, Candel, LivePlant } from '../assets'
 import About from '../components/home/about'
 import WhyChooseUs from '../components/home/WhyChooseUs/WhyChooseUs'
 import Contact from '../components/home/Contact/Contact'
+import Services from '../components/home/Services'
+import { WeddingPlace } from '../assets'
+import Footer from '../components/footer/Footer'
+import Hero from '../components/home/Hero'
 const Home = () => {
 	return (
 		<div className="">
 			<Navbar />
-			<section className="wrapper">
-				<div className="w-full xl:w-1/2 xl:border-r border-black xl:border-b-[0px] border-b">
-					<div className="md:px-20 px-5 pt-10 md:pt-20 pb-10 md:pb-5 flex flex-col">
-						<div className="border-b border-black pb-10 justify-start">
-							<p className='relative w-3/4 mb-4'>
-								<h1 className='md:text-6xl text-4xl tracking-wide font-semibold !leading-[1.2]'>Jack
-									<br />
-									Phat Nguyen</h1>
-							</p>
-							<p className='md:text-base text-sm tracking-wide'>
-								Discover Uniquely Crafted Bouquets and Gifts for Any Occasion:
-								<p>
-									<i>
-										Spread Joy with Our Online Flower Delivery Service
-									</i>
-								</p>
-							</p>
-						</div>
-						<div className="pt-[41px] justify-end">
-							<div className="grid grid-cols-2 w-full h-full">
-								<div className="w-full xl:h-64 2xl:h-96 filter grayscale-[70%] saturate-50 flex-[1_0_0] self-stretch items-start pr-2 md:pr-6">
-									<img src={HeroImg} alt="" className='w-full h-full object-cover aspect-square' />
-								</div>
-								<div className="flex items-end text-sm h-full border-l border-black pl-2 md:pl-6 flex-[1_0_0]">
-									<p>Experience the joy of giving with our modern floral studio. Order online and send fresh flowers, plants and gifts today.</p>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div className="w-full xl:w-1/2">
-					<div className="grid grid-cols-2">
-						<div className="border-b border-black">
-							<CardCategory text="Fresh Flower" />
-						</div>
-						<div className="border-black border-b border-l">
-							<CardItem src={FreshFlower} />
-						</div>
-						<div className="">
-							<CardItem src={DriedFlower} alt="" />
-						</div>
-						<div className="border-l border-black">
-							<CardCategory text="Dried Flower" />
-						</div>
-					</div>
-				</div>
-			</section>
+			<Hero />
 			<section className="wrapper">
 				<div className="hidden xl:block w-1/2 border-black border-r"></div>
 				<div className="w-full xl:w-1/2">
@@ -89,6 +47,25 @@ const Home = () => {
 			<div className="w-full border-b border-black text-center py-16">
 				<h1 className='md:text-5xl text-3xl tracking-wide font-semibold !leading-[1.2]'>Our Service</h1>
 			</div>
+			<Services />
+			<div className={`wrapper relative !`}>
+				<div className="w-full h-[800px]">
+					<img src={WeddingPlace} alt="" className='w-full h-full object-cover object-center' />
+				</div>
+				<div className="absolute bg-black/40 w-full h-full">
+					<div className="w-full h-full flex items-center justify-center">
+						<div className="w-full xl:w-[45%] md:p-20 px-4 py-20 text-center text-white">
+							<div className="flex flex-col justify-center items-center gap-4">
+								<span className='uppercase'>Service</span>
+								<h1 className='md:text-5xl text-3xl tracking-wide font-semibold mb-5'>Flower Subscriptions</h1>
+								<p >Experience the convenience and savings of regular flower deliveries with our flexible subscription service - up to 30% more profitable than one-time purchases.</p>
+								<button className='max-w-[70%] w-[50%] lg:w-[30%] uppercase px-5 py-3 text-white transition-all border border-white hover:bg-white hover:text-black mt-14'>subscribe now</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<Footer />
 		</div>
 	)
 }

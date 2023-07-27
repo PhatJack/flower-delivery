@@ -6,6 +6,9 @@ export default {
 	],
 	theme: {
 		extend: {
+			backgroundImage: {
+				wedddingPlace: "url('./assets/img/weddingPlace.jpg')"
+			},
 			screens: {
 				sm: '576px',
 				md: '768px',
