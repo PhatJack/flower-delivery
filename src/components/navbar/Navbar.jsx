@@ -10,8 +10,8 @@ const Navbar = () => {
 	}
 
 	return (
-		<div>
-			<div className="flex justify-between items-center text-sm border-b border-black">
+		<header>
+			<nav className="flex justify-between items-center text-sm border-b border-l border-black">
 				<div className="left hidden md:block">
 					<ul className='flex justify-between items-center'>
 						<li className='border-black border-r px-12 py-5'>
@@ -33,7 +33,7 @@ const Navbar = () => {
 								Sign in
 							</Link>
 						</li>
-						<li className='border-black border-r px-12 py-5'>
+						<li className='px-12 py-5'>
 							<Link>
 								Cart
 							</Link>
@@ -54,8 +54,8 @@ const Navbar = () => {
 						</li>
 					</ul>
 				</div>
-			</div>
-		</div>
+			</nav>
+		</header>
 	)
 }
 

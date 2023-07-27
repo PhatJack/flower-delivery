@@ -4,5 +4,5 @@ import Candel from './img/flowers/candel.png'
 import DriedFlower from './img/flowers/driedFlower.png'
 import LivePlant from './img/flowers/livePlant.png'
 import Fresheners from './img/flowers/fresheners.png'
-
-export { HeroImg, FreshFlower, Candel, DriedFlower, LivePlant,Fresheners }
+import FrontHouseLogo from './logo.jpg'
+export { HeroImg, FreshFlower, Candel, DriedFlower, LivePlant,Fresheners,FrontHouseLogo }
