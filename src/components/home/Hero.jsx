@@ -11,17 +11,18 @@ const Hero = () => {
 				<div className="md:px-20 px-5 pt-10 md:pt-20 pb-10 md:pb-5 flex flex-col">
 					<div className="border-b border-black pb-10 justify-start">
 						<p className='relative w-3/4 mb-4'>
-							<h1 className='md:text-6xl text-4xl tracking-wide font-semibold !leading-[1.2]'>Jack
+							<span className='md:text-6xl text-4xl tracking-wide font-semibold !leading-[1.2]'>Jack
 								<br />
-								Phat Nguyen</h1>
+								Phat Nguyen</span>
 						</p>
 						<p className='md:text-base text-sm tracking-wide'>
 							Discover Uniquely Crafted Bouquets and Gifts for Any Occasion:
-							<p>
+
+							<span className='block'>
 								<i>
 									Spread Joy with Our Online Flower Delivery Service
 								</i>
-							</p>
+							</span>
 						</p>
 					</div>
 					<div className="pt-[41px] justify-end">
