@@ -6,7 +6,7 @@ import Navbar from '../../components/navbar/Navbar'
 
 const Login = ({signIn}) => {
 	return (
-		<div className={`w-full h-full md:h-fit md:w-1/2 fixed bg-white border border-black top-[63px] mx-auto left-1/2 -translate-x-1/2 transition-all duration-700 ${signIn ? 'scale-100 opacity-100' : 'scale-0 op-'}`}>
+		<div className={`w-full h-full md:h-fit md:w-1/2 fixed bg-white border border-black top-[63px] left-1/2 -translate-x-1/2 transition-all duration-700`}>
 			<div className="flex justify-center items-center m-auto">
 				<div className="py-16 px-4 md:px-10 xl:px-20 xl:pt-20">
 					<h1 className='lg:text-5xl text-3xl font-semibold lg:pr-40 !leading-[1.2]'>Greetings! Welcome to luxury gift shop.</h1>
@@ -33,9 +33,9 @@ const Login = ({signIn}) => {
 							continue with facebook
 						</button>
 					</div>
-					<div className="flex justify-center items-end py-8 lg:py-12">
+					<div className="flex justify-center items-center md:items-end py-8 lg:py-12 flex-col md:flex-row md:gap-0 gap-3">
 						<p className='px-3 underline cursor-pointer'>Privacy Policy</p>
-						<p className='px-3 border-l border-black underline cursor-pointer'>Terms & conditions</p>
+						<p className='px-3 md:border-l border-black underline cursor-pointer'>Terms & conditions</p>
 					</div>
 				</div>
 			</div>

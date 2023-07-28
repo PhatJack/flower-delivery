@@ -3,18 +3,24 @@ import { Link } from 'react-router-dom'
 import { AiOutlineClose, AiOutlineMenu, AiOutlineShopping } from 'react-icons/ai'
 import MobileMenu from './MobileMenu';
 import Login from '../../pages/authentication/Login';
+import HomeCart from '../cart/HomeCart';
 const Navbar = () => {
 
 	const [nav, setNav] = useState(false);
+	const [signIn, setSignIn] = useState(false);
+	const [clickCart, setClickCart] = useState(false);
+
 
 	const handleNav = () => {
 		setNav(!nav)
 	}
 
-	const [signIn, setSignIn] = useState(false);
-
 	const handleSignIn = () => {
 		setSignIn(!signIn);
+	}
+
+	const handleCart = () => {
+		setClickCart(!clickCart)
 	}
 
 	return (
@@ -42,7 +48,7 @@ const Navbar = () => {
 							</Link>
 						</li>
 						<li className=''>
-							<Link className='px-16 py-5 block'>
+							<Link className='px-16 py-5 block' onClick={handleCart}>
 								Cart
 							</Link>
 						</li>
@@ -59,7 +65,7 @@ const Navbar = () => {
 						</li>
 						<li className='p-[18px] border-l border-black'>
 							<Link>
-								<AiOutlineShopping size={25} />
+								<AiOutlineShopping size={25} onClick={handleCart} />
 							</Link>
 						</li>
 					</ul>
@@ -67,20 +73,27 @@ const Navbar = () => {
 				{
 					nav &&
 					<div className={`fixed z-[30] transition-all duration-1000 !visible overflow-hidden` + (nav ? ' right-[100%] opacity-100' : ' right-[-100%] opacity-0')}>
-						<MobileMenu  handleSignIn={handleSignIn} />
+						<MobileMenu handleSignIn={handleSignIn} />
 					</div>
 				}
 				{nav && <div className='w-full h-screen fixed z-[10] bg-gray-300/40 top-[63px] backdrop-blur-sm md:hidden' onClick={handleNav}></div>}
 
 				{
 					signIn && <div className={`fixed z-[30] transition-all duration-500`}>
-						<Login signIn={signIn}/>
+						<Login signIn={signIn} />
 					</div>
 				}
 				{
 					signIn && <div className='w-full h-screen fixed z-[10] bg-gray-300/40 top-0 backdrop-blur-sm' onClick={handleSignIn}></div>
 				}
-
+				{
+					clickCart && <div className={`fixed z-[20] transition-all duration-500`}>
+						<HomeCart handleCart={handleCart} clickCart={clickCart} />
+					</div>
+				}
+				{
+					clickCart && <div className='w-full h-screen fixed z-[10] bg-gray-300/40 top-0 backdrop-blur-sm' onClick={handleCart}></div>
+				}
 			</nav>
 		</header>
 	)

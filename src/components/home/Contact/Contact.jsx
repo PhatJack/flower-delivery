@@ -20,7 +20,7 @@ const Contact = () => {
 					<p className='mb-4'>We will call you back</p>
 					<div className="flex justify-start items-center gap-5 md:flex-nowrap flex-wrap">
 						<input type="text" className='px-5 py-3 border border-gray-300 w-full md:w-3/4' placeholder='+84 XXX-XXX-XXX' />
-						<button className='w-full md:w-1/2 uppercase px-5 py-3 bg-black text-white transition-all hover:border-y border-black hover:bg-transparent hover:text-black'>book a call</button>
+						<button className='w-full md:w-1/2 uppercase px-5 py-3 bg-black text-white transition-all border-y border-black hover:bg-transparent hover:text-black'>book a call</button>
 					</div>
 				</div>
 				<div className="flex w-full">
@@ -51,15 +51,15 @@ const Contact = () => {
 					<img src={FrontHouseLogo} alt="" className='w-full h-full object-cover' />
 				</div>
 				<div className="flex w-full border-t border-black">
-					<div className="w-1/2 px-10 py-4 text-center text-2xl border-r border-black">
+					<div className="w-1/2 px-10 py-4 text-center text-xl md:text-2xl border-r border-black">
 						<h1 className='font-semibold'>Follow us</h1>
 					</div>
-					<div className="w-1/2 px-8">
+					<div className="w-1/2 px-4 md:px-8">
 						<ul className='w-full h-full flex justify-around items-center'>
 							{menuSocialMedia.map((item) => (
 								<li>
 									<Link>
-										<item.item size={30} />
+										<item.item className='text-2xl md:text-3xl'/>
 									</Link>
 								</li>
 							))}
