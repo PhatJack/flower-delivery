@@ -1,6 +1,6 @@
 import React from 'react'
 import Navbar from '../components/navbar/Navbar'
-import { Fresheners} from '../assets'
+import { Fresheners } from '../assets'
 import CardCategory from '../components/card/CardCategory'
 import CardItem from '../components/card/CardItem'
 import { FreshFlower, DriedFlower, Candel, LivePlant } from '../assets'
@@ -11,6 +11,8 @@ import Services from '../components/home/Services'
 import { WeddingPlace } from '../assets'
 import Footer from '../components/footer/Footer'
 import Hero from '../components/home/Hero'
+import { BsArrowRight, BsArrowLeft } from 'react-icons/bs'
+
 const Home = () => {
 	return (
 		<div className="">
@@ -21,7 +23,9 @@ const Home = () => {
 				<div className="w-full xl:w-1/2">
 					<div className="grid grid-cols-2">
 						<div className="">
-							<CardCategory text="Live Plant" />
+							<CardCategory text="Live Plant">
+								<BsArrowRight size={20} />
+							</CardCategory>
 						</div>
 						<div className="border-black border-l">
 							<CardItem src={LivePlant} />
@@ -30,10 +34,14 @@ const Home = () => {
 							<CardItem src={Candel} />
 						</div>
 						<div className="border-black border-y border-l">
-							<CardCategory text="Aroma Candels" />
+							<CardCategory text="Aroma Candels">
+								<BsArrowLeft size={20} className='absolute -left-5' />
+							</CardCategory>
 						</div>
 						<div className="">
-							<CardCategory text="Fresheners" />
+							<CardCategory text="Fresheners">
+								<BsArrowRight size={20} className='' />
+							</CardCategory>
 						</div>
 						<div className="border-black border-l">
 							<CardItem src={Fresheners} />

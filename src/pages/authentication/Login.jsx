@@ -1,0 +1,46 @@
+import React from 'react'
+import { FcGoogle } from 'react-icons/fc'
+import { BsFacebook } from 'react-icons/bs'
+import Navbar from '../../components/navbar/Navbar'
+
+
+const Login = ({signIn}) => {
+	return (
+		<div className={`w-full h-full md:h-fit md:w-1/2 fixed bg-white border border-black top-[63px] mx-auto left-1/2 -translate-x-1/2 transition-all duration-700 ${signIn ? 'scale-100 opacity-100' : 'scale-0 op-'}`}>
+			<div className="flex justify-center items-center m-auto">
+				<div className="py-16 px-4 md:px-10 xl:px-20 xl:pt-20">
+					<h1 className='lg:text-5xl text-3xl font-semibold lg:pr-40 !leading-[1.2]'>Greetings! Welcome to luxury gift shop.</h1>
+					<p className='mt-4 mb-2'>Use your mobile number to sign up or log in</p>
+					<div className="flex justify-start items-center gap-5 flex-col mb-5 mt-1">
+						<input type="text" className='px-5 py-3 border border-gray-300 w-full' placeholder='+84 XXX-XXX-XXX' />
+						<button className='w-full uppercase px-5 py-3 bg-black text-white transition-all border border-black hover:bg-transparent hover:text-black'>continue</button>
+					</div>
+					<div
+						class="my-4 flex items-center before:mt-0.5 before:flex-1 before:border-t before:border-neutral-300 after:mt-0.5 after:flex-1 after:border-t after:border-neutral-300">
+						<p
+							class="mx-4 mb-0 text-center font-semibold text-gray-500">
+							Or
+						</p>
+					</div>
+					<p className='text-sm'>Instantly login or sign up via Google</p>
+					<div className="flex justify-start items-center gap-5 2xl:flex-nowrap flex-wrap mt-3 my-7">
+						<button className='w-full 2xl:w-1/2 flex justify-center items-center gap-3 uppercase px-5 py-3 border text-sm text-black transition-all border-black hover:bg-black hover:text-white'>
+							<FcGoogle size={25}/>
+							continue with google
+						</button>
+						<button className='w-full 2xl:w-1/2 flex justify-center items-center gap-3 uppercase px-5 py-3 border text-sm text-black transition-all border-black hover:bg-black hover:text-white'>
+							<BsFacebook size={25} color='blue'/>
+							continue with facebook
+						</button>
+					</div>
+					<div className="flex justify-center items-end py-8 lg:py-12">
+						<p className='px-3 underline cursor-pointer'>Privacy Policy</p>
+						<p className='px-3 border-l border-black underline cursor-pointer'>Terms & conditions</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	)
+}
+
+export default Login

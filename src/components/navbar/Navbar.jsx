@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { AiOutlineClose, AiOutlineMenu, AiOutlineShopping } from 'react-icons/ai'
 import MobileMenu from './MobileMenu';
+import Login from '../../pages/authentication/Login';
 const Navbar = () => {
 
 	const [nav, setNav] = useState(false);
@@ -10,18 +11,24 @@ const Navbar = () => {
 		setNav(!nav)
 	}
 
+	const [signIn, setSignIn] = useState(false);
+
+	const handleSignIn = () => {
+		setSignIn(!signIn);
+	}
+
 	return (
 		<header className='sticky top-0 z-20 bg-white'>
 			<nav className="flex justify-between items-center text-sm border-b border-black relative">
 				<div className="left hidden md:block">
 					<ul className='flex justify-between items-center'>
-						<li className='border-black border-r px-12 py-5'>
-							<Link>
+						<li className='border-black border-r'>
+							<Link className='px-16 py-5 block'>
 								Shop
 							</Link>
 						</li>
-						<li className='border-black border-r px-12 py-5'>
-							<Link>
+						<li className='border-black border-r'>
+							<Link className='px-16 py-5 block'>
 								Contact
 							</Link>
 						</li>
@@ -29,13 +36,13 @@ const Navbar = () => {
 				</div>
 				<div className="right hidden md:block">
 					<ul className='flex justify-between items-center'>
-						<li className='border-black border-r border-l px-12 py-5'>
-							<Link>
+						<li className='border-black border-r border-l'>
+							<Link className='px-16 py-5 block' onClick={handleSignIn}>
 								Sign in
 							</Link>
 						</li>
-						<li className='px-12 py-5'>
-							<Link>
+						<li className=''>
+							<Link className='px-16 py-5 block'>
 								Cart
 							</Link>
 						</li>
@@ -60,10 +67,20 @@ const Navbar = () => {
 				{
 					nav &&
 					<div className={`fixed z-[30] transition-all duration-1000 !visible overflow-hidden` + (nav ? ' right-[100%] opacity-100' : ' right-[-100%] opacity-0')}>
-						<MobileMenu />
+						<MobileMenu  handleSignIn={handleSignIn} />
 					</div>
 				}
 				{nav && <div className='w-full h-screen fixed z-[10] bg-gray-300/40 top-[63px] backdrop-blur-sm md:hidden' onClick={handleNav}></div>}
+
+				{
+					signIn && <div className={`fixed z-[30] transition-all duration-500`}>
+						<Login signIn={signIn}/>
+					</div>
+				}
+				{
+					signIn && <div className='w-full h-screen fixed z-[10] bg-gray-300/40 top-0 backdrop-blur-sm' onClick={handleSignIn}></div>
+				}
+
 			</nav>
 		</header>
 	)
