@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 import { TbBrandFacebook, TbBrandPinterest, TbBrandLinkedin, TbBrandInstagram, TbBrandLeetcode } from 'react-icons/tb'
 
 
-const MobileMenu = ({handleSignIn}) => {
+const MobileMenu = ({ handleNav,nav,handleSignIn }) => {
 
 
 	const menu = [
@@ -36,7 +36,7 @@ const MobileMenu = ({handleSignIn}) => {
 	]
 
 	return (
-		<div className='w-full md:w-1/2 fixed h-screen top-[62px] bottom-0 bg-white border-x border-t border-black md:hidden'>
+		<div className={`w-full md:w-1/2 fixed h-screen top-[62px] bottom-0 bg-white border border-black md:hidden transition-all duration-500 ${nav ? 'left-0 opacity-100' : '-left-full opacity-0'}`}>
 			<div className="">
 				<ul className='flex flex-col border-black'>
 					{menu.map((item, index) => (

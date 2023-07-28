@@ -2,18 +2,20 @@ import React from 'react'
 import { AiOutlineClose } from 'react-icons/ai'
 import { FreshFlower } from '../../assets'
 const HomeCart = ({ handleCart, clickCart }) => {
+
+	// console.log(clickCart)
+
 	return (
-		<div className={`w-full h-full md:w-1/2 fixed bg-white border border-black top-0 transition-all duration-500 !visible ${clickCart ? 'right-0 opacity-100' : 'right-[-100%] opacity-0'}`}>
-			<div className="py-5 pl-5 pr-8 2xl:pr-20 border-b border-black">
+		<div className={`w-full h-screen md:w-1/2 fixed bg-white border-x border-b border-black top-0 bottom-0 z-20 !visible transition-all duration-500 ${clickCart ? 'right-0 opacity-100' : 'right-[-100%] opacity-0'}`}>
+			<div className="py-4 pl-5 pr-8 2xl:pr-20 border-b border-black">
 				<div className="flex justify-between items-center">
 					<span className='text-lg'>
 						Shopping Cart
 					</span>
 					<AiOutlineClose onClick={() => handleCart()} size={25} className='cursor-pointer hover:rotate-[360deg] duration-500 transition-all rotate-0' />
-
 				</div>
 			</div>
-			<div className="w-full h-[413px] md:h-[437px] overflow-y-scroll border-b border-black">
+			<div className="w-full h-[434px] overflow-y-scroll border-b border-black">
 				{[1, 2, 3, 4].map((item, index) => (
 					<div className="px-5 py-10 border-b border-black">
 						<div className="flex justify-start items-center gap-5 md:flex-nowrap flex-wrap">
@@ -43,10 +45,12 @@ const HomeCart = ({ handleCart, clickCart }) => {
 			<div className="px-5 py-8 border-b border-black">
 				<textarea name="" id="" rows="5" placeholder='Any message' className='w-[92%] h-20 focus:outline-none text-base'></textarea>
 			</div>
-			<div className="py-10">
-				<div className="flex flex-col justify-center items-center gap-1">
+			<div className="py-9">
+				<div className="flex flex-col justify-center items-center gap-2">
 					<p>Shipping & taxes calculated at checkout</p>
 					<p>Free standard shipping within JackPhat</p>
+					<p>Designed with love</p>
+					<p>Made by Jack Phat Nguyen</p>
 				</div>
 			</div>
 			<button className='w-full uppercase px-5 py-5 bg-black text-white transition-all border-t border-black hover:bg-transparent hover:text-black'>Check out</button>

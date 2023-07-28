@@ -22,7 +22,7 @@ const Navbar = () => {
 	const handleCart = () => {
 		setClickCart(!clickCart)
 	}
-
+	// console.log(clickCartConsumer)
 	return (
 		<header className='sticky top-0 z-20 bg-white'>
 			<nav className="flex justify-between items-center text-sm border-b border-black relative">
@@ -70,30 +70,16 @@ const Navbar = () => {
 						</li>
 					</ul>
 				</div>
-				{
-					nav &&
-					<div className={`fixed z-[30] transition-all duration-1000 !visible overflow-hidden` + (nav ? ' right-[100%] opacity-100' : ' right-[-100%] opacity-0')}>
-						<MobileMenu handleSignIn={handleSignIn} />
-					</div>
-				}
-				{nav && <div className='w-full h-screen fixed z-[10] bg-gray-300/40 top-[63px] backdrop-blur-sm md:hidden' onClick={handleNav}></div>}
 
+				<MobileMenu handleNav={handleNav} nav={nav} handleSignIn={handleSignIn} className={`${nav ? 'block' : 'hidden'}`} />
 				{
-					signIn && <div className={`fixed z-[30] transition-all duration-500`}>
-						<Login signIn={signIn} />
-					</div>
+					signIn && <Login signIn={signIn} />
 				}
 				{
 					signIn && <div className='w-full h-screen fixed z-[10] bg-gray-300/40 top-0 backdrop-blur-sm' onClick={handleSignIn}></div>
 				}
-				{
-					clickCart && <div className={`fixed z-[20] transition-all duration-500`}>
-						<HomeCart handleCart={handleCart} clickCart={clickCart} />
-					</div>
-				}
-				{
-					clickCart && <div className='w-full h-screen fixed z-[10] bg-gray-300/40 top-0 backdrop-blur-sm' onClick={handleCart}></div>
-				}
+				<HomeCart handleCart={handleCart} clickCart={clickCart} className={`${clickCart ? 'block' : 'hidden'}`} />
+				<div className={`w-full h-screen fixed z-[10] bg-gray-300/60 top-0 transition-all delay-500 ${clickCart ? 'block' : 'hidden'}`} onClick={handleCart}></div>
 			</nav>
 		</header>
 	)
