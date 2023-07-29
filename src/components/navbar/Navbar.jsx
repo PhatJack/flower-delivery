@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import { AiOutlineClose, AiOutlineMenu, AiOutlineShopping } from 'react-icons/ai'
 import MobileMenu from './MobileMenu';
 import Login from '../../pages/authentication/Login';
-import HomeCart from '../cart/HomeCart';
+import HomeCart from '../cart/Cart';
 const Navbar = () => {
 
 	const [nav, setNav] = useState(false);
@@ -29,7 +29,7 @@ const Navbar = () => {
 				<div className="left hidden md:block">
 					<ul className='flex justify-between items-center'>
 						<li className='border-black border-r'>
-							<Link className='px-16 py-5 block'>
+							<Link className='px-16 py-5 block' to={"/shop"}>
 								Shop
 							</Link>
 						</li>

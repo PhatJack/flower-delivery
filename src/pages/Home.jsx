@@ -16,7 +16,6 @@ import { BsArrowRight, BsArrowLeft } from 'react-icons/bs'
 const Home = () => {
 	return (
 		<div className="">
-			<Navbar />
 			<Hero />
 			<section className="wrapper">
 				<div className="hidden xl:block w-1/2 border-black border-r"></div>
@@ -73,7 +72,6 @@ const Home = () => {
 					</div>
 				</div>
 			</div>
-			<Footer />
 		</div>
 	)
 }
