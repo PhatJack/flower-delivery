@@ -43,9 +43,9 @@ const HomeCart = ({ handleCart, clickCart }) => {
 				</div>
 			</div>
 			<div className="px-5 py-8 border-b border-black">
-				<textarea name="" id="" rows="5" placeholder='Any message' className='w-[92%] h-20 focus:outline-none text-base'></textarea>
+				<textarea name="" id="" rows="5" placeholder='Any message' className='w-[92%] h-48 md:h-20 focus:outline-none text-base'></textarea>
 			</div>
-			<div className="py-9">
+			<div className="hidden md:block py-9">
 				<div className="flex flex-col justify-center items-center gap-2">
 					<p>Shipping & taxes calculated at checkout</p>
 					<p>Free standard shipping within JackPhat</p>
