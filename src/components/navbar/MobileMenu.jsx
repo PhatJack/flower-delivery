@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 import { TbBrandFacebook, TbBrandPinterest, TbBrandLinkedin, TbBrandInstagram, TbBrandLeetcode } from 'react-icons/tb'
 
 
-const MobileMenu = ({ handleNav,nav,handleSignIn }) => {
+const MobileMenu = ({ handleNav, nav, handleSignIn }) => {
 
 
 	const menu = [
@@ -14,7 +14,8 @@ const MobileMenu = ({ handleNav,nav,handleSignIn }) => {
 			onClick: () => handleSignIn()
 		},
 		{
-			title: "Shop"
+			title: "Shop",
+			link: "/flower-delivery/shop"
 		},
 		{
 			title: "Service"
@@ -41,7 +42,7 @@ const MobileMenu = ({ handleNav,nav,handleSignIn }) => {
 				<ul className='flex flex-col border-black'>
 					{menu.map((item, index) => (
 						<li className='text-base border-black border-b' key={index}>
-							<Link onClick={item.onClick} className='p-6 block'>
+							<Link onClick={item.onClick} className='p-6 block' to={item.link}>
 								{item.title}
 							</Link>
 						</li>

@@ -7,4 +7,6 @@ import Fresheners from './img/flowers/fresheners.png'
 import FrontHouseLogo from './logo.jpg'
 import ImgService from './img/image.png'
 import WeddingPlace from './img/weddingPlace.jpg'
-export { HeroImg, FreshFlower, Candel, DriedFlower, LivePlant, Fresheners, FrontHouseLogo, ImgService, WeddingPlace }
+import Logo from './logo.png'
+import ImgNotFound from './404NotFound.png'
+export { HeroImg, FreshFlower, Candel, DriedFlower, LivePlant, Fresheners, FrontHouseLogo, ImgService, WeddingPlace,Logo,ImgNotFound }

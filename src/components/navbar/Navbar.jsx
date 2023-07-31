@@ -4,6 +4,7 @@ import { AiOutlineClose, AiOutlineMenu, AiOutlineShopping } from 'react-icons/ai
 import MobileMenu from './MobileMenu';
 import Login from '../../pages/authentication/Login';
 import HomeCart from '../cart/Cart';
+import { Logo } from '../../assets';
 const Navbar = () => {
 
 	const [nav, setNav] = useState(false);
@@ -40,6 +41,11 @@ const Navbar = () => {
 						</li>
 					</ul>
 				</div>
+				<div className="w-[60px] h-[60px] hidden md:block">
+					<Link to={"/flower-delivery"}>
+						<img src={Logo} alt="" className='w-full h-full' />
+					</Link>
+				</div>
 				<div className="right hidden md:block">
 					<ul className='flex justify-between items-center'>
 						<li className='border-black border-r border-l'>
@@ -62,6 +68,13 @@ const Navbar = () => {
 								:
 								<AiOutlineClose size={25} onClick={handleNav} className="md:hidden cursor-pointer rotate-0 transition-all hover:rotate-[360deg] duration-500" />
 							}
+						</li>
+						<li>
+							<div className="w-[60px] h-[60px] md:hidden">
+								<Link to={"/flower-delivery"}>
+									<img src={Logo} alt="" className='w-full h-full' />
+								</Link>
+							</div>
 						</li>
 						<li className='p-[18px] border-l border-black'>
 							<Link>

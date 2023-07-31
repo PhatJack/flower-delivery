@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Lunasima&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Signika+Negative:wght@300;400;500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -10,7 +10,7 @@
 	padding: 0;
 	margin: 0;
 	box-sizing: border-box;
-	font-family: 'Lunasima', sans-serif;
+	font-family: 'Signika Negative', sans-serif;
 }
 
 ul li{
