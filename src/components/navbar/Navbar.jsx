@@ -85,12 +85,8 @@ const Navbar = () => {
 				</div>
 
 				<MobileMenu handleNav={handleNav} nav={nav} handleSignIn={handleSignIn} className={`${nav ? 'block' : 'hidden'}`} />
-				{
-					signIn && <Login signIn={signIn} />
-				}
-				{
-					signIn && <div className='w-full h-screen fixed z-[10] bg-gray-300/40 top-0 backdrop-blur-sm' onClick={handleSignIn}></div>
-				}
+				<Login signIn={signIn} />
+				<div className={`w-full h-screen fixed z-[10] bg-gray-300/40 top-0 ${signIn ? 'block' : 'hidden'}`} onClick={handleSignIn}></div>
 				<HomeCart handleCart={handleCart} clickCart={clickCart} className={`${clickCart ? 'block' : 'hidden'}`} />
 				<div className={`w-full h-screen fixed z-[10] bg-gray-300/60 top-0 transition-all delay-500 ${clickCart ? 'block' : 'hidden'}`} onClick={handleCart}></div>
 			</nav>
