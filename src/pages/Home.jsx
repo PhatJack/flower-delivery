@@ -19,7 +19,7 @@ const Home = () => {
 			<Hero />
 			<section className="wrapper">
 				<div className="hidden xl:block w-1/2 border-black border-r"></div>
-				<div className="w-full xl:w-1/2">
+				<div className="w-full xl:w-1/2 border-r border-black">
 					<div className="grid grid-cols-2">
 						<div className="">
 							<CardCategory text="Live Plant">
@@ -51,7 +51,7 @@ const Home = () => {
 			<About />
 			<WhyChooseUs />
 			<Contact />
-			<div className="w-full border-b border-black text-center py-16">
+			<div className="w-full border-b border-x border-black text-center py-16">
 				<h1 className='md:text-5xl text-3xl tracking-wide font-semibold !leading-[1.2]'>Our Service</h1>
 			</div>
 			<Services />
@@ -59,7 +59,7 @@ const Home = () => {
 				<div className="w-full h-[800px]">
 					<img src={WeddingPlace} alt="" className='w-full h-full object-cover object-center' />
 				</div>
-				<div className="absolute bg-black/40 w-full h-full">
+				<div className="absolute bg-black/40 w-full h-full border-r border-black">
 					<div className="w-full h-full flex items-center justify-center">
 						<div className="w-full xl:w-[45%] md:p-20 px-4 py-20 text-center text-white">
 							<div className="flex flex-col justify-center items-center gap-4">

@@ -47,10 +47,10 @@ const Contact = () => {
 				</div>
 			</div>
 			<div className="w-full xl:w-1/2 flex flex-col xl:border-b-[0px] border-black border-b">
-				<div className="w-full h-full">
+				<div className="w-full h-full border-r border-black">
 					<img src={FrontHouseLogo} alt="" className='w-full h-full object-cover' />
 				</div>
-				<div className="flex w-full border-t border-black">
+				<div className="flex w-full border-t border-black border-r">
 					<div className="w-1/2 px-10 py-4 text-center text-xl md:text-2xl border-r border-black">
 						<h1 className='font-semibold'>Follow us</h1>
 					</div>

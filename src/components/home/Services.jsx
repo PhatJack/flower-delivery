@@ -9,7 +9,7 @@ const Services = () => {
 					<img src={ImgService} alt="" className='w-full h-full object-cover filter grayscale-[30%]' />
 				</div>
 			</div>
-			<div className="w-full xl:w-1/2 flex items-center justify-center">
+			<div className="w-full xl:w-1/2 flex items-center justify-center border-r border-black">
 				<div className="w-full md:w-[70%] md:p-20 px-4 py-20 text-center">
 					<div className="flex flex-col justify-center items-center gap-4">
 						<span className='uppercase'>Service</span>

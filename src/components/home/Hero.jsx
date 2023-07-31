@@ -40,7 +40,7 @@ const Hero = () => {
 					</div>
 				</div>
 			</div>
-			<div className="w-full xl:w-1/2">
+			<div className="w-full xl:w-1/2 border-r border-black">
 				<div className="grid grid-cols-2">
 					<div className="border-b border-black relative">
 						<CardCategory text="Fresh Flower">

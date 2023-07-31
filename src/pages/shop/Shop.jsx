@@ -53,7 +53,7 @@ const Shop = () => {
 			) : (
 				<div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 w-full xl:w-[60%]">
 					{getFilteredItems().map((item, index) => (
-						<Link>
+						<Link to={`/flower-delivery/shop/product/${item.id}`} key={item.id}>
 							<div
 								key={index} // Add a key prop to avoid React warning
 								className={`aspect-square relative border-l border-b border-black overflow-hidden group ${index % 3 === 2 || index === getFilteredItems().length - 1 ? 'border-r' : ''

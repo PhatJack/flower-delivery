@@ -35,7 +35,7 @@ const Footer = () => {
 	]
 
 	return (
-		<div className='grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 border-t border-black'>
+		<div className='grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 border-y border-r border-black'>
 			<div className="w-full md:border-r border-black pb-10 xl:border-b-[0px] border-b">
 				<div className="py-10 px-4 md:p-10 flex flex-col gap-6">
 					<p className='text-sm'>

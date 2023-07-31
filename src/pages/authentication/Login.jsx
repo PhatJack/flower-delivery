@@ -16,9 +16,9 @@ const Login = ({signIn}) => {
 						<button className='w-full uppercase px-5 py-3 bg-black text-white transition-all border border-black hover:bg-transparent hover:text-black'>continue</button>
 					</div>
 					<div
-						class="my-4 flex items-center before:mt-0.5 before:flex-1 before:border-t before:border-neutral-300 after:mt-0.5 after:flex-1 after:border-t after:border-neutral-300">
+						className="my-4 flex items-center before:mt-0.5 before:flex-1 before:border-t before:border-neutral-300 after:mt-0.5 after:flex-1 after:border-t after:border-neutral-300">
 						<p
-							class="mx-4 mb-0 text-center font-semibold text-gray-500">
+							className="mx-4 mb-0 text-center font-semibold text-gray-500">
 							Or
 						</p>
 					</div>

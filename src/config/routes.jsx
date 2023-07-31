@@ -3,7 +3,7 @@ const routes = {
 	profile: '/flower-delivery/profile',
 	cart: '/flower-delivery/cart',
 	shop: '/flower-delivery/shop',
-	product: '/flower-delivery/product',
+	product: '/flower-delivery/shop/product/:id',
 	about: '/flower-delivery/aboutUS',
 	subscription: '/flower-delivery/subscription',
 	checkout: '/flower-delivery/checkOut'

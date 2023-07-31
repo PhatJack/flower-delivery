@@ -30,7 +30,7 @@ const WhyChooseUs = () => {
 					<h1 className='md:text-6xl text-4xl tracking-wide font-semibold !leading-[1.2]'>Why choose us</h1>
 				</div>
 			</div>
-			<div className="w-full xl:w-1/2">
+			<div className="w-full xl:w-1/2 border-r border-black">
 				{items.map((item, index) => (
 					<div className={ (index != items.length - 1) ? 'border-b border-black' : '' }>
 						<WhyChooseUsItem title={item.title} description={item.description} />

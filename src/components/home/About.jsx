@@ -8,7 +8,7 @@ const About = () => {
 					<h1 className='md:text-6xl text-4xl tracking-wide font-semibold !leading-[1.2]'>About us</h1>
 				</div>
 			</div>
-			<div className="w-full xl:w-1/2">
+			<div className="w-full xl:w-1/2 border-r border-black">
 				<div className="md:p-20 px-4 py-20">
 					<div className="flex flex-col gap-4 mb-16">
 						<span className='uppercase'>Our story</span>

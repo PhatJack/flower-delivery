@@ -26,7 +26,7 @@ const Navbar = () => {
 	// console.log(clickCartConsumer)
 	return (
 		<header className='sticky top-0 z-20 bg-white'>
-			<nav className="flex justify-between items-center text-sm border-b border-black relative">
+			<nav className="flex justify-between items-center text-sm border-b border-x border-black relative">
 				<div className="left hidden md:block">
 					<ul className='flex justify-between items-center'>
 						<li className='border-black border-r'>
