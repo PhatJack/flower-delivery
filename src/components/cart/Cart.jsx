@@ -26,7 +26,7 @@ const HomeCart = ({ handleCart, clickCart }) => {
 								<div className="detail flex flex-col gap-1">
 									<span className='block text-xl '>Rose Delight</span>
 									<p className='quantity'>Quanity(1)</p>
-									<span className="price block font-semibold">$100</span>
+									<span className="price block font-semibold text-lg">$100</span>
 								</div>
 								<button className='text-white p-4 transition-all duration-150 border-red-500 bg-red-500 border hover:bg-transparent hover:text-red-500'>
 									Remove

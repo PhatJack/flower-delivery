@@ -30,12 +30,12 @@ const Navbar = () => {
 				<div className="left hidden md:block">
 					<ul className='flex justify-between items-center'>
 						<li className='border-black border-r'>
-							<Link className='px-16 py-5 block' to={`/flower-delivery/shop`}>
+							<Link className='px-12 lg:px-16 py-5 block' to={`/flower-delivery/shop`}>
 								Shop
 							</Link>
 						</li>
 						<li className='border-black border-r'>
-							<Link className='px-16 py-5 block'>
+							<Link className='px-12 lg:px-16 py-5 block'>
 								Contact
 							</Link>
 						</li>
@@ -49,12 +49,12 @@ const Navbar = () => {
 				<div className="right hidden md:block">
 					<ul className='flex justify-between items-center'>
 						<li className='border-black border-r border-l'>
-							<Link className='px-16 py-5 block' onClick={handleSignIn}>
+							<Link className='px-12 lg:px-16 py-5 block' onClick={handleSignIn}>
 								Sign in
 							</Link>
 						</li>
 						<li className=''>
-							<Link className='px-16 py-5 block' onClick={handleCart}>
+							<Link className='px-12 lg:px-16 py-5 block' onClick={handleCart}>
 								Cart
 							</Link>
 						</li>
