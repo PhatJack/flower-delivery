@@ -4,7 +4,8 @@ export const ThemeContext = createContext();
 
 const initalState = {
 	grid_view: true,
-	isLoading: true
+	isLoading: true,
+	category: "freshflower"
 }
 
 
@@ -19,6 +20,12 @@ const reducer = (state, action) => {
 			return {
 				...state,
 				isLoading: action.value
+			}
+		case "CATEGORY":
+			return {
+				...state,
+				category: action.value
+
 			}
 		default: {
 			throw new Error(`Unhandled action type: ${action.type}`);

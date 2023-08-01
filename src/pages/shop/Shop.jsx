@@ -36,10 +36,11 @@ const Shop = () => {
 			id: "candel"
 		}
 	])
-	const [category, setCategory] = useState(categoryFilter[0].id);
 
 	const [state, dispatch] = useThemeContext()
-	console.log(state)
+	const [category, setCategory] = useState(state.category ? state.category : categoryFilter[0].id);
+
+	console.log(state.category)
 
 	const getFilteredItems = () => {
 		return shopAll.filter((item) => item.category === category)

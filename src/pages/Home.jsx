@@ -33,7 +33,7 @@ const Home = () => {
 							<CardItem src={Candel} />
 						</div>
 						<div className="border-black border-y border-l">
-							<CardCategory text="Aroma Candels">
+							<CardCategory text="Aroma Candels" category={"candel"}>
 								<BsArrowLeft size={20} className='absolute -left-5' />
 							</CardCategory>
 						</div>

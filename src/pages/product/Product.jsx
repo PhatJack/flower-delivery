@@ -77,7 +77,7 @@ const Product = () => {
 							<p className='mb-3 text-lg'>Price options</p>
 							<ul className='flex flex-col gap-2'>
 								<li className='flex gap-2 items-center'>
-									<input type="radio" name="price-options" id="" className='w-5 h-5' />
+									<input type="radio" name="price-options" id="" className='w-5 h-5' checked />
 									One time purchase. Price ${price}
 								</li>
 								<li className='flex gap-2 items-center'>

@@ -43,7 +43,7 @@ const Hero = () => {
 			<div className="w-full xl:w-1/2 border-r border-black">
 				<div className="grid grid-cols-2">
 					<div className="border-b border-black relative">
-						<CardCategory text="Fresh Flower">
+						<CardCategory text="Fresh Flower" category={"freshflower"}>
 							<BsArrowRight size={20} className='' />
 						</CardCategory>
 					</div>
@@ -54,7 +54,7 @@ const Hero = () => {
 						<CardItem src={DriedFlower} alt="" />
 					</div>
 					<div className="border-l border-black">
-						<CardCategory text="Dried Flower">
+						<CardCategory text="Dried Flower" category={"driedflower"}>
 							<BsArrowLeft size={20} className='absolute -left-5' />
 						</CardCategory>
 					</div>
