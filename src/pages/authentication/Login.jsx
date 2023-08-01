@@ -6,9 +6,9 @@ import Navbar from '../../components/navbar/Navbar'
 
 const Login = ({signIn}) => {
 	return (
-		<div className={`w-full h-full md:h-fit md:w-1/2 fixed bg-white border-x border-b z-20 border-black left-1/2 -translate-x-1/2 transition-all duration-700 ${signIn ? 'top-[61px] opacity-100' : '-top-full opacity-0' }`}>
+		<div className={`w-full h-full md:h-fit md:w-1/2 fixed bg-white border z-20 border-black left-1/2 -translate-x-1/2 transition-all duration-700 ${signIn ? 'top-[61px] opacity-100' : 'top-full opacity-0' }`}>
 			<div className="flex justify-center items-center m-auto">
-				<div className="py-16 px-4 md:px-10 xl:px-20 xl:pt-20">
+				<div className="py-12 px-4 md:px-10 xl:px-20 xl:pt-20">
 					<h1 className='lg:text-5xl text-3xl font-semibold lg:pr-40 !leading-[1.2]'>Greetings! Welcome to luxury gift shop.</h1>
 					<p className='mt-4 mb-2'>Use your mobile number to sign up or log in</p>
 					<div className="flex justify-start items-center gap-5 flex-col mb-5 mt-1">
@@ -23,7 +23,7 @@ const Login = ({signIn}) => {
 						</p>
 					</div>
 					<p className='text-sm'>Instantly login or sign up via Google</p>
-					<div className="flex justify-start items-center gap-5 2xl:flex-nowrap flex-wrap mt-3 my-7">
+					<div className="flex justify-start items-center gap-5 2xl:flex-nowrap flex-wrap mt-3 my-5 md:my-7">
 						<button className='w-full 2xl:w-1/2 flex justify-center items-center gap-3 uppercase px-5 py-3 border text-sm text-black transition-all border-black hover:bg-black hover:text-white'>
 							<FcGoogle size={25}/>
 							continue with google

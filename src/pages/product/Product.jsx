@@ -45,22 +45,22 @@ const Product = () => {
 	return (
 		<div className="flex flex-col">
 			<div className="w-full flex xl:flex-row flex-col">
-				<div className="w-1/2 border-r border-black">
+				<div className="w-full xl:w-1/2 border-r border-black xl:border-b-[0px] border-b">
 					<img src={img} alt="" className="w-full h-full object-cover" />
 				</div>
-				<div className="w-1/2">
-					<div className="p-10">
+				<div className="w-full xl:w-1/2">
+					<div className="p-5 py-10 xl:px-10">
 						<div className="navigation flex gap-2 items-center uppercase">
 							<NavLink to={'/flower-delivery/shop'}>{categoryMap[category] ? categoryMap[category] : 'Undefined'}</NavLink>
 							<span>/</span>
 							<span className="uppercase text-gray-400">{title}</span>
 						</div>
-						<div className="flex gap-2 items-center text-4xl my-7">
+						<div className="flex gap-2 items-center text-2xl md:text-4xl my-7">
 							<span className="name">{transformString('roses and gerberas')}</span>
 							<span>-</span>
 							<span className="price">${price}</span>
 						</div>
-						<p className="description">
+						<p className="description text-gray-600 md:text-black">
 							Large exceptional bouquet composed of a selection of David Austin roses, known for their beauty and
 							subtle fragrance. The bouquet is accompanied by seasonal foliage which will enhance these sublime
 							flowers even
@@ -90,15 +90,15 @@ const Product = () => {
 					</div>
 				</div>
 			</div>
-			<div className="w-full border border-black text-center py-28 text-5xl">
+			<div className="w-full border border-black text-center xl:py-28 py-12 text-3xl xl:text-5xl">
 				You may also like ...
 			</div>
 			<div className="overflow-hidden" ref={emblaRef}>
-				<div className="flex w-full">
+				<div className="grid grid-cols-2 md:flex w-full">
 					{shopAll.slice(0, 4).map((item, index) => (
 						<div
 							key={index} // Add a key prop to avoid React warning
-							className={`flex-[0_0_25%] min-w-0 aspect-square relative border-black overflow-hidden border-l group cursor-pointer ${index == 3 ? 'border-r' : ''}`}
+							className={`md:flex-[0_0_25%] min-w-0 aspect-square relative border-black overflow-hidden border-l group cursor-pointer md:border-b-[0px] border-b ${index == 3 ? 'border-r' : ''}`}
 						>
 							<img src={item.img} alt="" className="w-full h-full object-cover aspect-square" loading='lazy' />
 							<div className="w-full absolute bottom-full group-hover:bottom-2 transition-all duration-500 px-3">
