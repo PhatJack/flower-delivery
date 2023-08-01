@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { shopAll } from '../../data/shopData';
 import { RosesAndGerberas } from '../../assets/img/freshFlower';
-import { Link, useParams } from 'react-router-dom';
+import { Link, useParams,NavLink } from 'react-router-dom';
 import useEmblaCarousel from 'embla-carousel-react';
 import { RiShoppingBag3Fill, RiSliceFill } from 'react-icons/ri';
 import { AiFillHeart } from 'react-icons/ai';
@@ -40,7 +40,7 @@ const Product = () => {
 	const filterProduct = shopAll.find((item) => item.id === productID.id)
 	const { img, title, price, category } = filterProduct
 	const [emblaRef] = useEmblaCarousel()
-	console.log(category)
+	// console.log(category)
 
 	return (
 		<div className="flex flex-col">
@@ -51,9 +51,9 @@ const Product = () => {
 				<div className="w-1/2">
 					<div className="p-10">
 						<div className="navigation flex gap-2 items-center uppercase">
-							<Link to={'/flower-delivery/shop'}>{categoryMap[category] ? categoryMap[category] : 'Undefined'}</Link>
+							<NavLink to={'/flower-delivery/shop'}>{categoryMap[category] ? categoryMap[category] : 'Undefined'}</NavLink>
 							<span>/</span>
-							<Link className="uppercase text-gray-400">{title}</Link>
+							<span className="uppercase text-gray-400">{title}</span>
 						</div>
 						<div className="flex gap-2 items-center text-4xl my-7">
 							<span className="name">{transformString('roses and gerberas')}</span>
