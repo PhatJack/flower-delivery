@@ -5,8 +5,10 @@ export const ThemeContext = createContext();
 const initalState = {
 	grid_view: true,
 	isLoading: true,
-	category: "freshflower"
+	category: "freshflower",
+	sorting_value: "ascending"
 }
+
 
 
 const reducer = (state, action) => {
@@ -25,7 +27,11 @@ const reducer = (state, action) => {
 			return {
 				...state,
 				category: action.value
-
+			}
+		case "GET_SORT_VALUE":
+			return {
+				...state,
+				sorting_value: action.value
 			}
 		default: {
 			throw new Error(`Unhandled action type: ${action.type}`);
@@ -35,6 +41,9 @@ const reducer = (state, action) => {
 
 export const ThemeProvider = ({ children }) => {
 
+	const sorting = () => {
+		dispatch({ type: "GET_SORT_VALUE" })
+	}
 	const [state, dispatch] = useReducer(reducer, initalState);
 
 	const value = useMemo(() => ({ state, dispatch }), [state, dispatch]);

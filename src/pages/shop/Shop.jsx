@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { Img, RosesAndGerberas, heroFreshFlower, roseDelight } from '../../assets/img/freshFlower'
 import { RiShoppingBag3Fill } from 'react-icons/ri'
 import { AiFillHeart, AiOutlineHeart } from 'react-icons/ai'
@@ -40,12 +40,30 @@ const Shop = () => {
 	const [state, dispatch] = useThemeContext()
 	const [category, setCategory] = useState(state.category ? state.category : categoryFilter[0].id);
 
-	console.log(state.category)
+	// console.log(state)
 
 	const getFilteredItems = () => {
-		return shopAll.filter((item) => item.category === category)
-	}
+		const filteredItems = shopAll.filter((item) => item.category === category);
 
+		// Sort the filteredItems based on the selected sort option
+		switch (state.sorting_value) {
+			case 'ascending':
+				filteredItems.sort((a, b) => a.title.toLowerCase().localeCompare(b.title.toLowerCase()));
+				break;
+			case 'descending':
+				filteredItems.sort((a, b) => b.title.toLowerCase().localeCompare(a.title.toLowerCase()));
+				break;
+			case 'highTolow':
+				filteredItems.sort((a, b) => b.price - a.price);
+				break;
+			case 'lowTohigh':
+				filteredItems.sort((a, b) => a.price - b.price);
+				break;
+			default:
+			// Do nothing for unsupported sort options
+		}
+		return filteredItems;
+	};
 	return (
 		<div className='flex xl:flex-row flex-col'>
 			<div className="flex flex-col xl:w-[40%]">
@@ -62,20 +80,26 @@ const Shop = () => {
 				<div className="flex border-x border-b border-black px-4 py-3 justify-between items-center">
 					<div className='flex items-center gap-2'>
 						<button>
-							<BsGrid3X3Gap size={25} className='text-gray-500 hover:text-black transition-all' onClick={() => dispatch({ type: "SET_GRIDVIEW", value: true })} />
+							<BsGrid3X3Gap size={25} className={` hover:text-black transition-all ${state.grid_view ? 'text-black' : 'text-gray-500'}`} onClick={() => dispatch({ type: "SET_GRIDVIEW", value: true })} />
 						</button>
 						<button>
-							<RxHamburgerMenu size={25} className='text-gray-500 hover:text-black transition-all' onClick={() => dispatch({ type: "SET_GRIDVIEW", value: false })} />
+							<RxHamburgerMenu size={25} className={` hover:text-black transition-all ${!state.grid_view ? 'text-black' : 'text-gray-500'}`} onClick={() => dispatch({ type: "SET_GRIDVIEW", value: false })} />
 						</button>
 					</div>
-					<select name="sort" id="" className='border border-black p-3 appearance-none cursor-pointer'>
-						<option value="ascending">Sort by ascending</option>
-						<option value="descending">Sort by descending</option>
-						<option value="popularity">Sort by popularity</option>
-						<option value="highTolow">Sort by price: High to low</option>
-						<option value="lowTohigh">Sort by price: Low to high</option>
+					<form action="#" method="post">
+						<select
+							name="sort"
+							id="sort"
+							onChange={(e) => dispatch({ type: "GET_SORT_VALUE", value: e.target.value })}
+							className="border border-black p-3 appearance-none cursor-pointer transition-all focus:ring-2 focus:outline-none ring-black"
+						>
+							<option value="ascending">Sort by ascending</option>
+							<option value="descending">Sort by descending</option>
+							<option value="highTolow">Sort by price: High to low</option>
+							<option value="lowTohigh">Sort by price: Low to high</option>
+						</select>
+					</form>
 
-					</select>
 				</div>
 				{state.grid_view ? (
 					getFilteredItems().length === 0 ? (
