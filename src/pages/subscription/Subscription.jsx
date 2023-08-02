@@ -75,7 +75,7 @@ const Subscription = () => {
 		<div className="">
 			<div className='wrapper'>
 				<div className="w-full xl:w-1/2">
-					<div className="w-full h-[800px] aspect-square">
+					<div className="w-full md:h-[800px] aspect-square filter contrast-75">
 						<img src={FlowerAndLetter} alt="" className='w-full h-full object-cover aspect-square ' />
 					</div>
 				</div>
@@ -132,7 +132,7 @@ const Subscription = () => {
 								{planItems.map((item, index) => (
 									<div className="flex flex-col">
 										<div className="flex border-x border-t flex-col md:flex-row">
-											<div className="md:w-1/2 xl:w-[350px] h-[300px]">
+											<div className="md:w-1/2 xl:w-[350px] h-[300px] filter contrast-75">
 												<img src={item.img} alt="" className='w-full h-full object-cover' />
 											</div>
 											<div className="md:p-0 pb-4">

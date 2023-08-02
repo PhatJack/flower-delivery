@@ -5,11 +5,26 @@ import { Link } from 'react-router-dom'
 const Contact = () => {
 
 	const menuSocialMedia = [
-		{item: TbBrandFacebook},
-		{item: TbBrandInstagram},
-		{item: TbBrandLinkedin},
-		{item: TbBrandPinterest},
-		{item: TbBrandLeetcode}
+		{
+			item: TbBrandFacebook,
+			link: "https://www.facebook.com/jack.willam2003/"
+		},
+		{
+			item: TbBrandInstagram,
+			link: "https://www.instagram.com/tuila_tien_phat/"
+		},
+		{
+			item: TbBrandLinkedin,
+			link: "https://www.linkedin.com/in/phat-nguyen-tien-733397286/"
+		},
+		{
+			item: TbBrandPinterest,
+			link: "https://www.pinterest.co.uk/jackvuabongro/"
+		},
+		{
+			item: TbBrandLeetcode,
+			link: "https://leetcode.com/PhatJack/"
+		}
 	]
 
 	return (
@@ -58,8 +73,8 @@ const Contact = () => {
 						<ul className='w-full h-full flex justify-around items-center'>
 							{menuSocialMedia.map((item) => (
 								<li>
-									<Link>
-										<item.item className='text-2xl md:text-3xl'/>
+									<Link to={item.link} target='_blank'>
+										<item.item className='text-2xl md:text-3xl' />
 									</Link>
 								</li>
 							))}

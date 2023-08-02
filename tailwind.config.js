@@ -24,7 +24,8 @@ export default {
 			},
 			animation: {
 				'hover-out': 'wiggle 0.7s linear infinite',
-			}
+			},
+			
 
 		},
 	},

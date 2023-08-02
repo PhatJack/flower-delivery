@@ -28,15 +28,15 @@ const About = () => {
 				<div className="w-full xl:w-1/2 border-r border-black">
 					<div className="px-5 py-20 xl:p-20 h-full w-full">
 						<div className="h-full flex justify-center items-center flex-col gap-4">
-							<p className='text-6xl tracking-wider font-semibold'>Our Story</p>
-							<p className={`text-6xl font-['Ballet'_,cursive] my-3`}>About</p>
-							<p className='text-6xl tracking-wider font-semibold'>Jack Phat Nguyen</p>
-							<p className='px-40 text-center'>Discover Uniquely Crafted Bouquets and Gifts for Any Occasion: Spread Joy with Our Online Flower Delivery Service</p>
+							<p className='text-4xl md:text-6xl tracking-wider font-semibold'>Our Story</p>
+							<p className={`text-4xl md:text-6xl font-['Ballet'_,cursive] my-3`}>About</p>
+							<p className='text-4xl md:text-6xl tracking-wider font-semibold'>Jack Phat Nguyen</p>
+							<p className='px-10 md:px-40 text-center'>Discover Uniquely Crafted Bouquets and Gifts for Any Occasion: Spread Joy with Our Online Flower Delivery Service</p>
 						</div>
 					</div>
 				</div>
 				<div className="w-full xl:w-1/2">
-					<div className="w-full h-[850px] aspect-square filter contrast-75 grayscale-[30%]">
+					<div className="w-full h-full md:h-[850px] aspect-square filter contrast-75 grayscale-[30%]">
 						<img src={CEO} alt="" className='w-full h-full object-cover aspect-square mx-auto block' />
 					</div>
 				</div>
@@ -46,7 +46,7 @@ const About = () => {
 					<div className="flex flex-col justify-center items-center gap-4">
 						<span className='uppercase'>Service</span>
 						<h1 className='md:text-4xl text-2xl tracking-wide font-semibold mb-5'>Flower Subscriptions</h1>
-						<p className='w-[600px] text-center'>Kyiv LuxeBouquets was founded in 2010 by Natalia Zelinska
+						<p className='md:w-[600px] text-center'>Kyiv LuxeBouquets was founded in 2010 by Natalia Zelinska
 							with the goal of bringing unique and exquisite bouquets to the people of Kyiv.
 							Natalia has always had a passion for flowers and design,
 							and his vision was to create a local floral studio that would specialize in the creation and delivery of fresh,
@@ -56,23 +56,23 @@ const About = () => {
 			</div>
 			{items.map((item, index) => (
 				<div className="wrapper">
-					<div className={`w-full xl:w-1/2 border-r border-black ${index == 1 ? 'order-2 border-l' : ''}`}>
-						<div className="w-full h-[800px] aspect-square filter contrast-75 grayscale-[30%]">
+					<div className={`w-full xl:w-1/2 border-r border-black md:border-b-[0px] md:border-t-0 border-t border-b ${index == 1 ? 'order-2 border-l' : ''}`}>
+						<div className="w-full h-full object-center md:h-[800px] aspect-square filter contrast-75 grayscale-[30%]">
 							<img src={item.img} alt="" className='w-full h-full object-cover' />
 						</div>
 					</div>
 					<div className="w-full xl:w-1/2">
-						<div className="px-5 py-20 xl:p-20 h-full w-full">
+						<div className="px-5 py-20 xl:p-20 h-full w-full md:border-x-[0px] border-x border-black">
 							<div className="flex flex-col justify-start gap-4">
 								<h1 className='md:text-4xl text-2xl tracking-wide font-semibold mb-5'>{item.title}</h1>
-								<p className='w-[600px]'>{item.description}</p>
+								<p className='md:w-[600px]'>{item.description}</p>
 							</div>
 						</div>
 					</div>
 				</div>
 			))}
 			<div className="w-full h-full flex items-center justify-center">
-				<div className="w-full xl:w-[50%] md:p-20 px-4 py-20 text-center text-black">
+				<div className="w-full xl:w-[50%] md:p-20 px-4 py-20 text-center text-black md:border-x-0 border-x border-black">
 					<div className="flex flex-col justify-center items-center gap-4">
 						<h1 className='md:text-5xl text-3xl tracking-wide font-semibold mb-5'>Discover Our Beautiful Bouquets</h1>
 						<p>Explore our collection of exquisite bouquets and surprise your loved ones with the perfect gift. Click the button below to start shopping</p>

@@ -35,8 +35,8 @@ const Navbar = () => {
 							</Link>
 						</li>
 						<li className='border-black border-r'>
-							<Link className='px-12 lg:px-16 py-5 block'>
-								Contact
+							<Link className='px-12 lg:px-16 py-5 block' to={"/flower-delivery/about"}>
+								About
 							</Link>
 						</li>
 					</ul>

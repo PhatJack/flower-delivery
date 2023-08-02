@@ -4,7 +4,7 @@ export const ThemeContext = createContext();
 
 const initalState = {
 	grid_view: true,
-	isLoading: true,
+	isLoading: false,
 	category: "freshflower",
 	sorting_value: "ascending"
 }

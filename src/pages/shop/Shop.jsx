@@ -120,7 +120,7 @@ const Shop = () => {
 												<p className={`price text-black/70`}>price ${item.price}</p>
 											</div>
 										</div>
-										<div className="flex flex-col justify-center gap-1 items-center absolute top-[25%] -right-16 group-hover:right-0 transition-all duration-500">
+										<div className="flex flex-col justify-center gap-1 items-center absolute top-[25%] -right-16 opacity-0 group-hover:opacity-100 group-hover:right-0 transition-all duration-500">
 											<span className={`bg-white/70 p-2 transition-all duration-500 shadow-md text-black hover:bg-black hover:text-white`}>
 												<RiShoppingBag3Fill size={28} />
 											</span>

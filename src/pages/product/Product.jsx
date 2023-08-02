@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import { shopAll } from '../../data/shopData';
 import { RosesAndGerberas } from '../../assets/img/freshFlower';
-import { Link, useParams,NavLink } from 'react-router-dom';
-import useEmblaCarousel from 'embla-carousel-react';
+import { Link, useParams, NavLink } from 'react-router-dom';
 import { RiShoppingBag3Fill, RiSliceFill } from 'react-icons/ri';
 import { AiFillHeart } from 'react-icons/ai';
 
@@ -39,8 +38,7 @@ const Product = () => {
 	const productID = useParams();
 	const filterProduct = shopAll.find((item) => item.id === productID.id)
 	const { img, title, price, category } = filterProduct
-	const [emblaRef] = useEmblaCarousel()
-	// console.log(category)
+	const similarProductList = () => { return shopAll.filter((item) => item.category === category) }
 
 	return (
 		<div className="flex flex-col">
@@ -93,9 +91,9 @@ const Product = () => {
 			<div className="w-full border border-black text-center xl:py-28 py-12 text-3xl xl:text-5xl">
 				You may also like ...
 			</div>
-			<div className="overflow-hidden" ref={emblaRef}>
+			<div className="overflow-hidden">
 				<div className="grid grid-cols-2 md:flex w-full">
-					{shopAll.slice(0, 4).map((item, index) => (
+					{similarProductList().slice(0,4).map((item, index) => (
 						<div
 							key={index} // Add a key prop to avoid React warning
 							className={`md:flex-[0_0_25%] min-w-0 aspect-square relative border-black overflow-hidden border-l group cursor-pointer md:border-b-[0px] border-b ${index == 3 ? 'border-r' : ''}`}

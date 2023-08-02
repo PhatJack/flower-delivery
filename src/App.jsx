@@ -6,13 +6,16 @@ import Home from './pages/Home';
 import { publicRoutes } from './routes/routes'
 import DefaultLayout from './layouts/DefaultLayout'
 import HashLoader from "react-spinners/HashLoader";
+import { useThemeContext } from './hook/useThemeContext';
 
 
 
 function App() {
 	const [loading, setLoading] = useState(false)
+	const [state,dispatch] = useThemeContext();
 	useEffect(() => {
 		setLoading(true)
+		dispatch({type: "IS_LOADING",value:true})
 		setTimeout(() => {
 			setLoading(false)
 		}, 4000);

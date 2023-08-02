@@ -12,6 +12,7 @@ import Footer from '../components/footer/Footer'
 import Hero from '../components/home/Hero'
 import { BsArrowRight, BsArrowLeft } from 'react-icons/bs'
 import AboutHome from '../components/home/AboutHome'
+import { Link } from 'react-router-dom'
 
 const Home = () => {
 	return (
@@ -56,7 +57,7 @@ const Home = () => {
 			</div>
 			<Services />
 			<div className={`wrapper relative !`}>
-				<div className="w-full h-[800px]">
+				<div className="w-full md:h-[800px]">
 					<img src={WeddingPlace} alt="" className='w-full h-full object-cover object-center' />
 				</div>
 				<div className="absolute bg-black/40 w-full h-full border-r border-black">
@@ -65,8 +66,10 @@ const Home = () => {
 							<div className="flex flex-col justify-center items-center gap-4">
 								<span className='uppercase'>Service</span>
 								<h1 className='md:text-5xl text-3xl tracking-wide font-semibold mb-5'>Flower Subscriptions</h1>
-								<p >Experience the convenience and savings of regular flower deliveries with our flexible subscription service - up to 30% more profitable than one-time purchases.</p>
-								<button className='max-w-[70%] w-[50%] lg:w-[30%] uppercase px-5 py-3 text-white transition-all border border-white hover:bg-white hover:text-black mt-14'>subscribe now</button>
+								<p>Experience the convenience and savings of regular flower deliveries with our flexible subscription service - up to 30% more profitable than one-time purchases.</p>
+								<Link
+									to={"/flower-delivery/subscription"}
+									className='max-w-[70%] w-[50%] lg:w-[30%] uppercase px-5 py-3 text-white transition-all border border-white hover:bg-white hover:text-black mt-14'>subscribe now</Link>
 							</div>
 						</div>
 					</div>
