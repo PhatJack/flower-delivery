@@ -4,7 +4,6 @@ import { Fresheners } from '../assets'
 import CardCategory from '../components/card/CardCategory'
 import CardItem from '../components/card/CardItem'
 import { FreshFlower, DriedFlower, Candel, LivePlant } from '../assets'
-import About from '../components/home/about'
 import WhyChooseUs from '../components/home/WhyChooseUs/WhyChooseUs'
 import Contact from '../components/home/Contact/Contact'
 import Services from '../components/home/Services'
@@ -12,6 +11,7 @@ import { WeddingPlace } from '../assets'
 import Footer from '../components/footer/Footer'
 import Hero from '../components/home/Hero'
 import { BsArrowRight, BsArrowLeft } from 'react-icons/bs'
+import AboutHome from '../components/home/AboutHome'
 
 const Home = () => {
 	return (
@@ -48,7 +48,7 @@ const Home = () => {
 					</div>
 				</div>
 			</section>
-			<About />
+			<AboutHome />
 			<WhyChooseUs />
 			<Contact />
 			<div className="w-full border-b border-x border-black text-center py-16">

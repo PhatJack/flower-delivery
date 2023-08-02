@@ -1,6 +1,7 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
-const About = () => {
+const AboutHome = () => {
 	return (
 		<section className='wrapper'>
 			<div className="w-full xl:w-1/2 xl:border-r border-black xl:border-b-[0px] border-b">
@@ -21,13 +22,13 @@ const About = () => {
 							Make someone's day amazing by sending flowers, plants and gifts the same or next day. Ordering flowers online has never been easier.
 						</p>
 					</div>
-					<button className='py-4 px-6 border-black border hover:text-white relative swipe-slide'>
+					<Link className='py-4 px-6 border-black border hover:text-white relative swipe-slide' to={"/flower-delivery/about"}>
 						Learn more
-					</button>
+					</Link>
 				</div>
 			</div>
 		</section>
 	)
 }
 
-export default About
+export default AboutHome

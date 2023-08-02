@@ -4,7 +4,7 @@ const routes = {
 	cart: '/flower-delivery/cart',
 	shop: '/flower-delivery/shop',
 	product: '/flower-delivery/shop/product/:id',
-	about: '/flower-delivery/aboutUS',
+	about: '/flower-delivery/about',
 	subscription: '/flower-delivery/subscription',
 	checkout: '/flower-delivery/checkOut'
 }
