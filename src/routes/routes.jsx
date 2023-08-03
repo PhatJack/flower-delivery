@@ -5,6 +5,7 @@ import About from '../pages/about/About'
 import Product from '../pages/product/Product'
 import NotFound from '../pages/notFound/NotFound'
 import Subscription from '../pages/subscription/Subscription'
+import Checkout from '../pages/checkout/Checkout'
 import Home from '../pages/Home'
 const publicRoutes = [
 	{ path: config.routes.home, component: Home },
@@ -13,7 +14,7 @@ const publicRoutes = [
 	{ path: config.routes.shop, component: Shop },
 	{ path: config.routes.product, component: Product },
 	{ path: config.routes.subscription, component: Subscription },
-	// { path: config.routes.checkout, component: Checkout },
+	{ path: config.routes.checkout, component: Checkout },
 	{ path: '*', component: NotFound }
 ]
 

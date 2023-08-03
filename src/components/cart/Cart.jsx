@@ -1,6 +1,7 @@
 import React from 'react'
 import { AiOutlineClose } from 'react-icons/ai'
 import { FreshFlower } from '../../assets'
+import { Link } from 'react-router-dom'
 const HomeCart = ({ handleCart, clickCart }) => {
 
 	// console.log(clickCart)
@@ -53,7 +54,9 @@ const HomeCart = ({ handleCart, clickCart }) => {
 					<p>Made by Jack Phat Nguyen</p>
 				</div>
 			</div>
-			<button className='w-full uppercase px-5 py-5 bg-black text-white transition-all border-t border-black hover:bg-transparent hover:text-black'>Check out</button>
+			<Link
+			to={"/checkout"}
+			className='block text-center w-full uppercase px-5 py-5 bg-black text-white transition-all border-t border-black hover:bg-transparent hover:text-black'>Check out</Link>
 		</div>
 	)
 }

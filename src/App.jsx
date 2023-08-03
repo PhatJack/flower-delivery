@@ -1,5 +1,4 @@
 import { Fragment, useState, useEffect, CSSProperties } from 'react'
-import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Home from './pages/Home';
@@ -12,10 +11,8 @@ import ScrollToTop from './components/scrollToTop/ScrollToTop'
 
 function App() {
 	const [loading, setLoading] = useState(false)
-	const [state,dispatch] = useThemeContext();
 	useEffect(() => {
 		setLoading(true)
-		dispatch({type: "IS_LOADING",value:true})
 		setTimeout(() => {
 			setLoading(false)
 		}, 4000);
