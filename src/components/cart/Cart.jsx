@@ -56,6 +56,7 @@ const HomeCart = ({ handleCart, clickCart }) => {
 			</div>
 			<Link
 			to={"/checkout"}
+			onClick={() => handleCart()}
 			className='block text-center w-full uppercase px-5 py-5 bg-black text-white transition-all border-t border-black hover:bg-transparent hover:text-black'>Check out</Link>
 		</div>
 	)
