@@ -17,7 +17,7 @@ const HomeCart = ({ handleCart, clickCart }) => {
 			</div>
 			<div className="w-full h-[434px] overflow-y-scroll border-b border-black">
 				{[1, 2, 3, 4].map((item, index) => (
-					<div className="px-5 py-10 border-b border-black">
+					<div className="px-5 py-10 border-b border-black" key={index}>
 						<div className="flex justify-start items-center gap-5 md:flex-nowrap flex-wrap">
 							<div className="w-40 h-40 border border-black">
 								<img src={FreshFlower} alt="" className='w-full h-full object-cover' />

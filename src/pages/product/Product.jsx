@@ -49,7 +49,7 @@ const Product = () => {
 				<div className="w-full xl:w-1/2">
 					<div className="p-5 py-10 xl:px-10">
 						<div className="navigation flex gap-2 items-center uppercase">
-							<NavLink to={'/flower-delivery/shop'}>{categoryMap[category] ? categoryMap[category] : 'Undefined'}</NavLink>
+							<NavLink to={'/shop'}>{categoryMap[category] ? categoryMap[category] : 'Undefined'}</NavLink>
 							<span>/</span>
 							<span className="uppercase text-gray-400">{title}</span>
 						</div>

@@ -107,7 +107,7 @@ const Shop = () => {
 					) : (
 						<div className="grid grid-cols-2 xl:grid-cols-3 w-full">
 							{getFilteredItems().map((item, index) => (
-								<Link to={`/flower-delivery/shop/product/${item.id}`} key={item.id}>
+								<Link to={`/shop/product/${item.id}`} key={item.id}>
 									<div
 										key={index} // Add a key prop to avoid React warning
 										className={`aspect-square relative border-l border-b border-black overflow-hidden group ${index % 3 === 2 || index === getFilteredItems().length - 1 ? 'border-r' : ''
@@ -139,7 +139,7 @@ const Shop = () => {
 						<div className="border-x border-black ">
 							<div className="md:grid md:grid-cols-1">
 								{getFilteredItems().map((item, index) => (
-									<Link to={`/flower-delivery/shop/product/${item.id}`} key={item.id}>
+									<Link to={`/shop/product/${item.id}`} key={item.id}>
 										<div className="flex border-b border-black gap-3 w-full flex-col md:flex-row">
 											<div className="w-full md:w-[300px] h-[300px] border-r md:border-b-[0px] border-b border-black md:max-w-[35%] cursor-pointer">
 												<img src={item.img} alt="" className='w-full h-full object-cover' />

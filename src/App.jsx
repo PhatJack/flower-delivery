@@ -1,13 +1,13 @@
 import { Fragment, useState, useEffect, CSSProperties } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Home from './pages/Home';
 import { publicRoutes } from './routes/routes'
 import DefaultLayout from './layouts/DefaultLayout'
 import HashLoader from "react-spinners/HashLoader";
 import { useThemeContext } from './hook/useThemeContext';
-
+import ScrollToTop from './components/scrollToTop/ScrollToTop'
 
 
 function App() {
@@ -40,7 +40,8 @@ function App() {
 	}
 
 	return (
-		<BrowserRouter>
+		<Router>
+			<ScrollToTop />
 			{
 				loading ?
 					<HashLoader
@@ -57,7 +58,7 @@ function App() {
 						{renderPublicRoutes()}
 					</Routes>
 			}
-		</BrowserRouter>
+		</Router>
 	)
 }
 

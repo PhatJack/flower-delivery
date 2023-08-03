@@ -32,7 +32,7 @@ const WhyChooseUs = () => {
 			</div>
 			<div className="w-full xl:w-1/2 border-r border-black">
 				{items.map((item, index) => (
-					<div className={ (index != items.length - 1) ? 'border-b border-black' : '' }>
+					<div className={ (index != items.length - 1) ? 'border-b border-black' : '' } key={index}>
 						<WhyChooseUsItem title={item.title} description={item.description} />
 					</div>
 				))}

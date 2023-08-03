@@ -30,19 +30,19 @@ const Navbar = () => {
 				<div className="left hidden md:block">
 					<ul className='flex justify-between items-center'>
 						<li className='border-black border-r'>
-							<Link className='px-12 lg:px-16 py-5 block' to={`/flower-delivery/shop`}>
+							<Link className='px-12 lg:px-16 py-5 block' to={`/shop`}>
 								Shop
 							</Link>
 						</li>
 						<li className='border-black border-r'>
-							<Link className='px-12 lg:px-16 py-5 block' to={"/flower-delivery/about"}>
+							<Link className='px-12 lg:px-16 py-5 block' to={"/about"}>
 								About
 							</Link>
 						</li>
 					</ul>
 				</div>
 				<div className="w-[60px] h-[60px] hidden md:block">
-					<Link to={"/flower-delivery"}>
+					<Link to={"/"}>
 						<img src={Logo} alt="" className='w-full h-full' />
 					</Link>
 				</div>

@@ -71,8 +71,8 @@ const Contact = () => {
 					</div>
 					<div className="w-1/2 px-4 md:px-8">
 						<ul className='w-full h-full flex justify-around items-center'>
-							{menuSocialMedia.map((item) => (
-								<li>
+							{menuSocialMedia.map((item,index) => (
+								<li key={index}>
 									<Link to={item.link} target='_blank'>
 										<item.item className='text-2xl md:text-3xl' />
 									</Link>

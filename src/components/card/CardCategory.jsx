@@ -15,7 +15,7 @@ const CardCategory = ({ text ,children,category}) => {
 			</p>
 			<div className="flex flex-[0_0_1] items-end">
 				<Link
-					className='flex md:text-lg justify-center items-center gap-1 font-medium relative' to={`/flower-delivery/shop`}
+					className='flex md:text-lg justify-center items-center gap-1 font-medium relative' to={`/shop`}
 					onClick={() => dispatch({type: "CATEGORY",value: category})}
 					>
 					Shop now

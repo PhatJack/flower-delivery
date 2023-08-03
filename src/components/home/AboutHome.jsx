@@ -22,7 +22,7 @@ const AboutHome = () => {
 							Make someone's day amazing by sending flowers, plants and gifts the same or next day. Ordering flowers online has never been easier.
 						</p>
 					</div>
-					<Link className='py-4 px-6 border-black border hover:text-white relative swipe-slide' to={"/flower-delivery/about"}>
+					<Link className='py-4 px-6 border-black border hover:text-white relative swipe-slide' to={"/about"}>
 						Learn more
 					</Link>
 				</div>

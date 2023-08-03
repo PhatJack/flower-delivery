@@ -55,7 +55,7 @@ const About = () => {
 				</div>
 			</div>
 			{items.map((item, index) => (
-				<div className="wrapper">
+				<div className="wrapper" key={index}>
 					<div className={`w-full xl:w-1/2 border-r border-black md:border-b-[0px] md:border-t-0 border-t border-b ${index == 1 ? 'order-2 border-l' : ''}`}>
 						<div className="w-full h-full object-center md:h-[800px] aspect-square filter contrast-75 grayscale-[30%]">
 							<img src={item.img} alt="" className='w-full h-full object-cover' />
