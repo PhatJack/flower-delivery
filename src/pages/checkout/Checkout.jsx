@@ -29,7 +29,7 @@ const Checkout = () => {
 									</svg>
 									<Link to={""} 
 									onClick={() =>  setShippingDetail(!shippingDetail)}
-									className={`ml-1 text-sm font-medium hover:text-blue-600 md:ml-2 transition-all duration-500 ${!shippingDetail ? 'text-gray-400' : 'text-black'}`}>Shipping</Link>
+									className={`ml-1 text-sm font-medium hover:text-blue-600 md:ml-2 transition-all duration-500 ${(!shippingDetail) ? 'text-gray-400' : 'text-black'}`}>Shipping</Link>
 								</div>
 							</li>
 							<li aria-current="page">
@@ -110,7 +110,13 @@ const Checkout = () => {
 						<div className="aspect-square w-36 h-36 border border-black">
 							<img src={BlommingLove} alt="" className='w-full h-full object-cover ' />
 						</div>
-						<div className="">
+						<div className="flex justify-between items-center w-full">
+							<div className="flex flex-col gap-3">
+								<span className="block text-lg">Blomming Love</span>	
+								<span className="block text-sm">Quantity (1)</span>
+							</div>
+							<span className="block text-base">$100</span>
+
 						</div>
 					</div>
 					<p className='py-3'>If you have our gift card, enter the code to get discounts</p>
