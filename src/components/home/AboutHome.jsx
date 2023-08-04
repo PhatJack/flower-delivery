@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 const AboutHome = () => {
 	return (
 		<section className='wrapper'>
-			<div className="w-full xl:w-1/2 xl:border-r border-black xl:border-b-[0px] border-b">
+			<div className="w-full xl:w-1/2 xl:border-r border-black xl:border-b-[0px] border-b xl:border-x-0 border-x">
 				<div className="md:p-20 px-4 py-20">
 					<h1 className='md:text-6xl text-4xl tracking-wide font-semibold !leading-[1.2]'>About us</h1>
 				</div>
