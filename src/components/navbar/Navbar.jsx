@@ -5,6 +5,7 @@ import MobileMenu from './MobileMenu';
 import Login from '../../pages/authentication/Login';
 import HomeCart from '../cart/Cart';
 import { Logo } from '../../assets';
+import Register from '../../pages/authentication/Register';
 const Navbar = () => {
 
 	const [nav, setNav] = useState(false);
@@ -85,8 +86,9 @@ const Navbar = () => {
 				</div>
 
 				<MobileMenu handleNav={handleNav} nav={nav} handleSignIn={handleSignIn} className={`${nav ? 'block' : 'hidden'}`} />
-				<Login signIn={signIn} />
-				<div className={`w-full h-screen fixed z-[10] bg-gray-300/40 top-0 ${signIn ? 'block' : 'hidden'}`} onClick={handleSignIn}></div>
+				{/* <Login signIn={signIn} />
+				<div className={`w-full h-screen fixed z-[10] bg-gray-300/40 top-0 ${signIn ? 'block' : 'hidden'}`} onClick={handleSignIn}></div> */}
+				<Register register={signIn} />
 				<HomeCart handleCart={handleCart} clickCart={clickCart} className={`${clickCart ? 'block' : 'hidden'}`} />
 				<div className={`w-full h-screen fixed z-[10] bg-gray-300/60 top-0 transition-all delay-500 ${clickCart ? 'block' : 'hidden'}`} onClick={handleCart}></div>
 			</nav>

@@ -4,9 +4,9 @@ import { BsFacebook } from 'react-icons/bs'
 import Navbar from '../../components/navbar/Navbar'
 
 
-const Login = ({signIn}) => {
+const Login = ({ signIn }) => {
 	return (
-		<div className={`w-full h-full md:h-fit md:w-1/2 fixed bg-white border z-20 border-black left-1/2 -translate-x-1/2 transition-all duration-700 ${signIn ? 'top-[61px] opacity-100' : '-top-full opacity-0' }`}>
+		<div className={`w-full h-full md:h-fit md:w-1/2 fixed bg-white border z-20 border-black left-1/2 -translate-x-1/2 transition-all duration-700 ${signIn ? 'top-[61px] opacity-100' : '-top-full opacity-0'}`}>
 			<div className="flex justify-center items-center m-auto">
 				<div className="py-12 px-4 md:px-10 xl:px-20 xl:pt-20">
 					<h1 className='lg:text-5xl text-3xl font-semibold lg:pr-40 !leading-[1.2]'>Greetings! Welcome to luxury gift shop.</h1>
@@ -23,14 +23,19 @@ const Login = ({signIn}) => {
 						</p>
 					</div>
 					<p className='text-sm'>Instantly login or sign up via Google</p>
-					<div className="flex justify-start items-center gap-5 2xl:flex-nowrap flex-wrap mt-3 my-5 md:my-7">
-						<button className='w-full 2xl:w-1/2 flex justify-center items-center gap-3 uppercase px-5 py-3 border text-sm text-black transition-all border-black hover:bg-black hover:text-white'>
-							<FcGoogle size={25}/>
-							continue with google
-						</button>
-						<button className='w-full 2xl:w-1/2 flex justify-center items-center gap-3 uppercase px-5 py-3 border text-sm text-black transition-all border-black hover:bg-black hover:text-white'>
-							<BsFacebook size={25} color='blue'/>
-							continue with facebook
+					<div className="flex flex-col justify-start items-center gap-2 2xl:flex-nowrap flex-wrap my-3 md:my-5">
+						<div className="flex justify-start items-center gap-5 2xl:flex-nowrap flex-wrap w-full">
+							<button className='w-full 2xl:w-1/2 flex justify-center items-center gap-3 uppercase px-5 py-3 border text-sm text-black transition-all border-black hover:bg-black hover:text-white'>
+								<FcGoogle size={25} />
+								continue with google
+							</button>
+							<button className='w-full 2xl:w-1/2 flex justify-center items-center gap-3 uppercase px-5 py-3 border text-sm text-black transition-all border-black hover:bg-black hover:text-white'>
+								<BsFacebook size={25} color='blue' />
+								continue with facebook
+							</button>
+						</div>
+						<button className='w-full uppercase px-5 py-4 border text-sm text-black transition-all border-black hover:bg-black hover:text-white'>
+							Sign Up With Email
 						</button>
 					</div>
 					<div className="flex justify-center items-center md:items-end py-8 lg:py-12 flex-col md:flex-row md:gap-0 gap-3">
