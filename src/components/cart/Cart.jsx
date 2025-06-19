@@ -7,7 +7,7 @@ const HomeCart = ({ handleCart, clickCart }) => {
 	// console.log(clickCart)
 
 	return (
-		<div className={`w-full h-screen md:w-1/2 fixed bg-white border-x border-b border-black top-0 bottom-0 z-20 !visible transition-all duration-500 ${clickCart ? 'right-0 opacity-100' : 'right-[-100%] opacity-0'}`}>
+		<div className={`w-full h-screen md:w-1/2 flex flex-col fixed bg-white border-x border-b border-black top-0 bottom-0 z-20 !visible transition-all duration-500 overflow-hidden ${clickCart ? 'right-0 opacity-100' : 'right-[-100%] opacity-0'}`}>
 			<div className="py-4 pl-5 pr-8 2xl:pr-20 border-b border-black">
 				<div className="flex justify-between items-center">
 					<span className='text-lg'>
@@ -16,9 +16,9 @@ const HomeCart = ({ handleCart, clickCart }) => {
 					<AiOutlineClose onClick={() => handleCart()} size={25} className='cursor-pointer hover:rotate-[360deg] duration-500 transition-all rotate-0' />
 				</div>
 			</div>
-			<div className="w-full h-[434px] overflow-y-scroll border-b border-black">
+			<div className="w-full h-[434px] overflow-y-scroll border-b border-black divide-y divide-black">
 				{[1, 2, 3, 4].map((item, index) => (
-					<div className="px-5 py-10 border-b border-black" key={index}>
+					<div className="px-5 py-10" key={index}>
 						<div className="flex justify-start items-center gap-5 md:flex-nowrap flex-wrap">
 							<div className="w-40 h-40 border border-black">
 								<img src={FreshFlower} alt="" className='w-full h-full object-cover' />
@@ -43,7 +43,7 @@ const HomeCart = ({ handleCart, clickCart }) => {
 					<span className='block text-xl font-medium'>$100</span>
 				</div>
 			</div>
-			<div className="px-5 py-8 border-b border-black">
+			<div className="px-5 py-8 border-b border-black flex-1">
 				<textarea name="" id="" rows="5" placeholder='Any message' className='w-[92%] h-48 md:h-20 focus:outline-none text-base'></textarea>
 			</div>
 			<div className="hidden md:block py-9">

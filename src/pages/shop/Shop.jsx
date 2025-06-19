@@ -66,17 +66,27 @@ const Shop = () => {
 	};
 	return (
 		<div className='flex xl:flex-row flex-col'>
-			<div className="flex flex-col xl:w-[40%]">
+			<div className="flex flex-col xl:w-2/5">
 				{categoryFilter.map((item, index) => (
-					<div className="w-full h-[300px] md:h-[550px] border-l border-b border-black relative">
+					<div
+						key={item.id}
+						className="w-full aspect-square border-l border-b border-black relative overflow-hidden"
+					>
 						<Link onClick={() => setCategory(item.id)}>
-							<img src={item.img} alt="" className='w-full h-full object-cover aspect-square' loading='lazy' />
-							<span className='flex justify-center items-center w-full h-full bg-black/[0.15] absolute top-0 left-1/2 -translate-x-1/2 my-auto text-5xl text-white text-center font-semibold'>{item.title}</span>
+							<img
+								src={item.img}
+								alt=""
+								className='absolute inset-0 w-full h-full object-cover'
+								loading='lazy'
+							/>
+							<span className='flex justify-center items-center w-full h-full absolute inset-0 bg-black/[0.15] text-2xl md:text-3xl text-white text-center font-semibold'>
+								{item.title}
+							</span>
 						</Link>
 					</div>
 				))}
 			</div>
-			<div className="flex w-full xl:w-[60%] flex-col">
+			<div className="flex w-full xl:w-3/5 flex-col">
 				<div className="flex border-x border-b border-black px-4 py-3 justify-between items-center">
 					<div className='flex items-center gap-2'>
 						<button>

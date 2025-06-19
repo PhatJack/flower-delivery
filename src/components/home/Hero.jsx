@@ -11,7 +11,7 @@ const Hero = () => {
 	return (
 		<section className="wrapper">
 			<div className="w-full xl:w-1/2 xl:border-r border-black xl:border-b-[0px] border-b">
-				<div className="md:px-20 px-5 pt-10 md:pt-20 pb-10 md:pb-5 flex flex-col">
+				<div className="xl:px-20 px-5 pt-10 xl:pt-20 pb-10 xl:pb-5 flex flex-col">
 					<div className="border-b border-black pb-5 2xl:pb-10 justify-start">
 						<p className='relative w-full 2xl:w-3/4 mb-4'>
 							<span className='md:text-6xl text-4xl tracking-wide font-semibold !leading-[1.2]'>Jack

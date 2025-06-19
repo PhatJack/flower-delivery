@@ -75,12 +75,16 @@ const Product = () => {
 							<p className='mb-3 text-lg'>Price options</p>
 							<ul className='flex flex-col gap-2'>
 								<li className='flex gap-2 items-center'>
-									<input type="radio" name="price-options" id="" className='w-5 h-5' checked />
-									One time purchase. Price ${price}
+									<input type="radio" name="price-options" id="price-options-1" className='w-5 h-5' checked />
+									<label htmlFor="price-options-1">
+										One time purchase. Price ${price}
+									</label>
 								</li>
 								<li className='flex gap-2 items-center'>
-									<input type="radio" name="price-options" id="" className='w-5 h-5' />
-									Subscribe now, and save 25% on this order.
+									<input type="radio" name="price-options" id="price-options-2" className='w-5 h-5' />
+									<label htmlFor="price-options-2">
+										Subscribe now, and save 25% on this order.
+									</label>
 								</li>
 							</ul>
 						</div>
@@ -93,11 +97,13 @@ const Product = () => {
 			</div>
 			<div className="overflow-hidden">
 				<div className="grid grid-cols-2 md:flex w-full">
-					{similarProductList().slice(0,4).map((item, index) => (
+					{similarProductList().slice(0, 4).map((item, index) => (
 						<div
 							key={index} // Add a key prop to avoid React warning
 							className={`md:flex-[0_0_25%] min-w-0 aspect-square relative border-black overflow-hidden border-l group cursor-pointer md:border-b-[0px] border-b ${index == 3 ? 'border-r' : ''}`}
 						>
+							<Link className='absolute inset-0 z-10' to={`/shop/product/${item.id}`}>
+							</Link>
 							<img src={item.img} alt="" className="w-full h-full object-cover aspect-square" loading='lazy' />
 							<div className="w-full absolute bottom-full group-hover:bottom-2 transition-all duration-500 px-3">
 								<div className="flex flex-col gap-2 justify-center items-center w-full text-center bg-white/80 shadow-md p-2 bottom-full">
@@ -105,7 +111,7 @@ const Product = () => {
 									<p className={`price text-black/70`}>price ${item.price}</p>
 								</div>
 							</div>
-							<div className="flex flex-col justify-center gap-1 items-center absolute top-[25%] -right-16 group-hover:right-0 transition-all duration-500">
+							<div className="flex flex-col justify-center gap-1 items-center absolute top-[25%] -right-16 group-hover:right-0 transition-all duration-500 z-50">
 								<span className={`bg-white/70 p-2 transition-all duration-500 shadow-md text-black hover:bg-black hover:text-white cursor-pointer`}>
 									<RiShoppingBag3Fill size={28} />
 								</span>

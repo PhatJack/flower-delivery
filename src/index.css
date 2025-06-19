@@ -21,6 +21,6 @@ ul li{
 		@apply before:absolute before:content-[''] before:w-0 before:h-full before:bg-black before:-z-10 before:top-0 before:left-0 hover:before:w-full before:transition-all hover:before:duration-500 before:duration-500
 	}
 	.wrapper {
-		@apply w-full flex flex-col xl:flex-row border-b border-l border-black
+		@apply w-full h-full flex flex-col xl:flex-row border-b border-l border-black
 	}
 }

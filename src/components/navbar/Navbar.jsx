@@ -63,16 +63,16 @@ const Navbar = () => {
 				</div>
 				<div className="nav-menu block md:hidden w-full">
 					<ul className='flex justify-between items-center'>
-						<li className='p-[18px] border-r border-black'>
+						<li onClick={handleNav} className='p-[18px] border-r border-black cursor-pointer'>
 							{!nav ?
-								<AiOutlineMenu size={25} onClick={handleNav} className="md:hidden cursor-pointer" />
+								<AiOutlineMenu size={25} className="md:hidden" />
 								:
-								<AiOutlineClose size={25} onClick={handleNav} className="md:hidden cursor-pointer rotate-0 transition-all hover:rotate-[360deg] duration-500" />
+								<AiOutlineClose size={25} className="md:hidden rotate-0 transition-all hover:rotate-[360deg] duration-500" />
 							}
 						</li>
 						<li>
 							<div className="w-[60px] h-[60px] md:hidden">
-								<Link to={"/flower-delivery"}>
+								<Link to={"/"}>
 									<img src={Logo} alt="" className='w-full h-full' />
 								</Link>
 							</div>
@@ -88,7 +88,7 @@ const Navbar = () => {
 				<MobileMenu handleNav={handleNav} nav={nav} handleSignIn={handleSignIn} className={`${nav ? 'block' : 'hidden'}`} />
 				{/* <Login signIn={signIn} />
 				<div className={`w-full h-screen fixed z-[10] bg-gray-300/40 top-0 ${signIn ? 'block' : 'hidden'}`} onClick={handleSignIn}></div> */}
-				<Register register={signIn} />
+				<Register register={signIn} setSignIn={setSignIn} />
 				<HomeCart handleCart={handleCart} clickCart={clickCart} className={`${clickCart ? 'block' : 'hidden'}`} />
 				<div className={`w-full h-screen fixed z-[10] bg-gray-300/60 top-0 transition-all delay-500 ${clickCart ? 'block' : 'hidden'}`} onClick={handleCart}></div>
 			</nav>

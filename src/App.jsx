@@ -15,7 +15,7 @@ function App() {
 		setLoading(true)
 		setTimeout(() => {
 			setLoading(false)
-		}, 4000);
+		}, 2000);
 	}, [])
 	const renderPublicRoutes = () => {
 		return publicRoutes.map((route, index) => {

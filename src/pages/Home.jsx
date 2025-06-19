@@ -56,21 +56,19 @@ const Home = () => {
 				<h1 className='md:text-5xl text-3xl tracking-wide font-semibold !leading-[1.2]'>Our Service</h1>
 			</div>
 			<Services />
-			<div className={`wrapper relative !`}>
-				<div className="w-full md:h-[800px]">
+			<div className={`wrapper relative`}>
+				<div className="absolute inset-0">
 					<img src={WeddingPlace} alt="" className='w-full h-full object-cover object-center' />
 				</div>
-				<div className="absolute bg-black/40 w-full h-full border-r border-black">
-					<div className="w-full h-full flex items-center justify-center">
-						<div className="w-full xl:w-[45%] md:p-20 px-4 py-20 text-center text-white">
-							<div className="flex flex-col justify-center items-center gap-4">
-								<span className='uppercase'>Service</span>
-								<h1 className='md:text-5xl text-3xl tracking-wide font-semibold mb-5'>Flower Subscriptions</h1>
-								<p>Experience the convenience and savings of regular flower deliveries with our flexible subscription service - up to 30% more profitable than one-time purchases.</p>
-								<Link
-									to={"/flower-delivery/subscription"}
-									className='max-w-[70%] w-[50%] lg:w-[30%] uppercase px-5 py-3 text-white transition-all border border-white hover:bg-white hover:text-black mt-14'>subscribe now</Link>
-							</div>
+				<div className="relative w-full md:h-[800px] bg-black/40 border-r border-black flex justify-center items-center">
+					<div className="w-full h-full xl:max-w-3xl md:p-20 px-4 py-20 text-center text-white">
+						<div className="h-full flex flex-col justify-center items-center gap-4">
+							<span className='uppercase'>Service</span>
+							<h1 className='md:text-5xl text-3xl tracking-wide font-semibold mb-5'>Flower Subscriptions</h1>
+							<p>Experience the convenience and savings of regular flower deliveries with our flexible subscription service - up to 30% more profitable than one-time purchases.</p>
+							<Link
+								to={"/flower-delivery/subscription"}
+								className='max-w-sm uppercase px-5 py-3 text-white transition-all border border-white hover:bg-white hover:text-black mt-14'>subscribe now</Link>
 						</div>
 					</div>
 				</div>
