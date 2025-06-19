@@ -56,7 +56,7 @@ const Home = () => {
 				<h1 className='md:text-5xl text-3xl tracking-wide font-semibold !leading-[1.2]'>Our Service</h1>
 			</div>
 			<Services />
-			<div className={`wrapper relative`}>
+			<div className={`wrapper border-b-0 relative`}>
 				<div className="absolute inset-0">
 					<img src={WeddingPlace} alt="" className='w-full h-full object-cover object-center' />
 				</div>

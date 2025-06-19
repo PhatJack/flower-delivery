@@ -35,8 +35,8 @@ const Footer = () => {
 	]
 
 	return (
-		<div className='grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 border border-black'>
-			<div className="w-full md:border-r border-black pb-10 xl:border-b-[0px] border-b">
+		<div className='grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 border border-black md:divide-x divide-black'>
+			<div className="w-full pb-10">
 				<div className="py-10 px-4 md:p-10 flex flex-col gap-6">
 					<p className='text-sm'>
 						Remember to offer beautiful flowers from Kyiv LuxeBouquets Valentines Day, Mothers Day, Christmas...
@@ -47,7 +47,7 @@ const Footer = () => {
 					<button className='w-full uppercase px-5 py-3 bg-black text-white transition-all border-x border-black hover:bg-transparent hover:text-black'>book a call</button>
 				</div>
 			</div>
-			<div className="w-full xl:border-r border-black xl:border-b-[0px] border-b">
+			<div className="w-full ">
 				<div className="py-10 px-4 md:p-10">
 					<h1 className='text-lg text-gray-500 mb-5'>Contact Us</h1>
 					<div className="flex flex-col justify-start gap-4">
@@ -68,11 +68,11 @@ const Footer = () => {
 					</div>
 				</div>
 			</div>
-			<div className="w-full md:border-r border-black md:border-b-[0px] border-b">
+			<div className="w-full">
 				<div className="py-10 px-4 md:p-10">
 					<h1 className='text-lg text-gray-500 mb-5'>Shop</h1>
 					<ul className='flex flex-col gap-2'>
-						{menuShop.map((item,index) => (
+						{menuShop.map((item, index) => (
 							<li className='text-sm' key={index}>
 								<Link>
 									{item}
@@ -82,7 +82,7 @@ const Footer = () => {
 					</ul>
 					<h1 className='text-lg text-gray-500 my-5'>Service</h1>
 					<ul className='flex flex-col gap-2'>
-						{menuService.map((item,index) => (
+						{menuService.map((item, index) => (
 							<li className='text-sm' key={index}>
 								<Link>
 									{item}
